@@ -31,11 +31,11 @@ public class DoorBehaviour : MonoBehaviour
 
     private void ChangeInterpolation()
     {
-        if (opening && interpolation < 1.0)
+        if (opening)
         {
             interpolation += Time.deltaTime / 2;
         }
-        else if (!opening && interpolation > 0)
+        else
         {
             interpolation -= Time.deltaTime / 2;
         }
@@ -43,11 +43,11 @@ public class DoorBehaviour : MonoBehaviour
         if (interpolation <= 0)
         {
             interpolation = 0.001f;
-            opening = !opening;
+            opening = true;
         } else if (interpolation >= 1)
         {
             interpolation = 0.999f;
-            opening = !opening;
+            opening = false;
         }
     }
 }
