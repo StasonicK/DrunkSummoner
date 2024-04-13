@@ -1,4 +1,5 @@
 ﻿using GamePlay;
+using UI.Screens.GamePlay;
 using UnityEngine;
 
 namespace Infrastructure
@@ -40,6 +41,7 @@ namespace Infrastructure
             _wordsHolder.Show();
             _initialScreen.SetActive(false);
             _gamePlayScreen.SetActive(true);
+            WordCounter.Instance.Construct(2); // test
         }
     }
 }
