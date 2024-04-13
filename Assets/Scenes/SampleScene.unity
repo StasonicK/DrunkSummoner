@@ -250,6 +250,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2929787842629111615}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &434855681 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 434855681, guid: 3b9b8914da876b843955de56119cb659,
+    type: 3}
+  m_PrefabInstance: {fileID: 2929787842629111615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434855679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59cf29fc92e84681b148540c04645e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &563723075
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +488,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 830923711688571522, guid: b0c444e45ce42c74693ee76a0838769f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 830923711688571526, guid: b0c444e45ce42c74693ee76a0838769f,
         type: 3}
       propertyPath: m_Pivot.x
@@ -590,6 +607,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 434855681, guid: 3b9b8914da876b843955de56119cb659, type: 3}
+      propertyPath: _word
+      value: 
+      objectReference: {fileID: 267399499660482032}
     - target: {fileID: 2929787843302826459, guid: 3b9b8914da876b843955de56119cb659,
         type: 3}
       propertyPath: m_RootOrder
@@ -788,5 +809,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStateManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
+      propertyPath: _wordsHolder
+      value: 
+      objectReference: {fileID: 434855681}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
+      propertyPath: _initialScreen
+      value: 
+      objectReference: {fileID: 1431535090}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
+      propertyPath: _gamePlayScreen
+      value: 
+      objectReference: {fileID: 2034371334}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 422bf727e7666394d954b0c54a4e8112, type: 3}
