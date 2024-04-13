@@ -9,9 +9,11 @@ namespace GamePlay.Words
 
         private const int MIN_INCLUSIVE_VALUE = 0;
         private const int MAX_EXCLUSIVE_VALUE = 2;
+        private const int POSITIVE_DIRECTION = 1;
+        private const int NEGATIVE_DIRECTION = -1;
 
         private int _xDirection;
-        private int _zDirection;
+        private int _yDirection;
 
         private void Awake()
         {
@@ -19,14 +21,9 @@ namespace GamePlay.Words
             int isPositive = Random.Range(MIN_INCLUSIVE_VALUE, MAX_EXCLUSIVE_VALUE);
 
             if (IsVertical(isVertical))
-            {
-                if (IsPositive(isPositive))
-                {
-                }
-            }
+                _xDirection = IsPositive(isPositive) ? POSITIVE_DIRECTION : NEGATIVE_DIRECTION;
             else
-            {
-            }
+                _yDirection = IsPositive(isPositive) ? POSITIVE_DIRECTION : NEGATIVE_DIRECTION;
         }
 
         private static bool IsVertical(int isVertical) =>
@@ -38,7 +35,7 @@ namespace GamePlay.Words
         protected override void Move()
         {
             transform.Translate(new Vector3(_xDirection * _movementMultiplier * Time.deltaTime,
-                _zDirection * _movementMultiplier * Time.deltaTime, MIN_INCLUSIVE_VALUE));
+                _yDirection * _movementMultiplier * Time.deltaTime, MIN_INCLUSIVE_VALUE));
         }
     }
 }
