@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using GamePlay.Words;
+using UnityEngine;
 
 namespace GamePlay
 {
@@ -6,14 +7,15 @@ namespace GamePlay
     {
         [SerializeField] private GameObject _word;
 
-        public void Show()
+        public void Show(WordMovement wordMovement)
         {
-            _word.SetActive(true);
-        }
-
-        public void Hide()
-        {
-            _word.SetActive(false);
+            switch (wordMovement)
+            {
+                case StraightLineWordMovement:
+                case DiagonalWordMovement:
+                    _word.SetActive(true);
+                    break;
+            }
         }
 
         public void HideAll()

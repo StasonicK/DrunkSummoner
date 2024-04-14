@@ -1,4 +1,9 @@
-﻿using GamePlay;
+﻿using System.Collections.Generic;
+using System.Linq;
+using GamePlay;
+using GamePlay.SummoningSpells;
+using StaticData;
+using UI.Screens.GamePlay;
 using UnityEngine;
 
 namespace Infrastructure
@@ -9,7 +14,12 @@ namespace Infrastructure
         [SerializeField] private GameObject _initialScreen;
         [SerializeField] private GameObject _gamePlayScreen;
 
+        private const string SummoningSpellsPath = "StaticData/SummoningSpells";
+
         private static GameStateManager _instance;
+
+        private Dictionary<SummoningSpellId, SummoningSpellStaticData> _summoningSpells;
+        private SummoningSpellStaticData _summoningSpellStaticData;
 
         private void Awake()
         {
@@ -33,13 +43,23 @@ namespace Infrastructure
             _wordsHolder.HideAll();
             _initialScreen.SetActive(true);
             _gamePlayScreen.SetActive(false);
+            _summoningSpells = Resources
+                .LoadAll<SummoningSpellStaticData>(SummoningSpellsPath)
+                .ToDictionary(x => x.SummoningSpellId, x => x);
         }
 
         public void ToGamePlay()
         {
-            _wordsHolder.Show();
+            _summoningSpellStaticData = _summoningSpells[SummoningSpellId.PotatoBag];
+            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[0]);
             _initialScreen.SetActive(false);
             _gamePlayScreen.SetActive(true);
+            WordCounter.Instance.Construct(2); // test
+        }
+
+        public void WordCatched()
+        {
+            WordCounter.Instance.IncreaseCount();
         }
     }
 }
