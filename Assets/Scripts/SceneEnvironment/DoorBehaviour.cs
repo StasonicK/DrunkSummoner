@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
@@ -44,7 +42,8 @@ public class DoorBehaviour : MonoBehaviour
         {
             interpolation = 0.001f;
             opening = true;
-        } else if (interpolation >= 1)
+        }
+        else if (interpolation >= 1)
         {
             interpolation = 0.999f;
             opening = false;

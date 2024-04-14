@@ -20,6 +20,7 @@ namespace Infrastructure
 
         private Dictionary<SummoningSpellId, SummoningSpellStaticData> _summoningSpells;
         private SummoningSpellStaticData _summoningSpellStaticData;
+        private int _currentWordIndex;
 
         private void Awake()
         {
@@ -51,15 +52,19 @@ namespace Infrastructure
         public void ToGamePlay()
         {
             _summoningSpellStaticData = _summoningSpells[SummoningSpellId.PotatoBag];
-            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[0]);
+            _wordsHolder.HideAll();
+            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex]);
             _initialScreen.SetActive(false);
             _gamePlayScreen.SetActive(true);
-            WordCounter.Instance.Construct(2); // test
+            WordCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
         }
 
         public void WordCatched()
         {
             WordCounter.Instance.IncreaseCount();
+            _currentWordIndex++;
+            _wordsHolder.HideAll();
+            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex]);
         }
     }
 }
