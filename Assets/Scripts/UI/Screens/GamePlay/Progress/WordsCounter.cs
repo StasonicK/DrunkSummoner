@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace UI.Screens.GamePlay
+namespace UI.Screens.GamePlay.Progress
 {
     public class WordsCounter : MonoBehaviour
     {

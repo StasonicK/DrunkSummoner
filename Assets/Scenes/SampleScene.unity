@@ -452,7 +452,7 @@ MonoBehaviour:
   - _gameObject: {fileID: 34548970}
     _prefab: Assets/Resources/Prefabs/GUI/UI.prefab
   - _gameObject: {fileID: 1431535090}
-    _prefab: Assets/Resources/Prefabs/GUI/InitialScreen.prefab
+    _prefab: Assets/Resources/Prefabs/GUI/Screens/InitialScreen.prefab
   - _gameObject: {fileID: 830923711655335529}
     _prefab: Assets/Resources/Prefabs/GUI/PlaySpellButton.prefab
   - _gameObject: {fileID: 830923711655335531}
@@ -460,7 +460,9 @@ MonoBehaviour:
   - _gameObject: {fileID: 830923711655335530}
     _prefab: Assets/Resources/Prefabs/GUI/PlaySpellButton.prefab
   - _gameObject: {fileID: 2034371334}
-    _prefab: Assets/Resources/Prefabs/GUI/GamePlayScreen.prefab
+    _prefab: Assets/Resources/Prefabs/GUI/Screens/GamePlayScreen.prefab
+  - _gameObject: {fileID: 830923711655335532}
+    _prefab: Assets/Resources/Prefabs/GUI/Windows/FailWindow.prefab
   - _gameObject: {fileID: 2044191402}
     _prefab: Assets/Resources/Prefabs/GameStateManager.prefab
 --- !u!4 &2046696553
@@ -595,6 +597,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1317345824437803068, guid: b0c444e45ce42c74693ee76a0838769f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0c444e45ce42c74693ee76a0838769f, type: 3}
 --- !u!1 &830923711655335529 stripped
@@ -615,6 +622,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 830923711655335528}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &830923711655335532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1317345824437803068, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &830923711655335533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4615957708537887057, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830923711655335532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ab18c209804fa68e89af3d5147d479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2929787842629111615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,6 +862,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameStateManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
+      propertyPath: _failWindow
+      value: 
+      objectReference: {fileID: 830923711655335533}
     - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
         type: 3}
       propertyPath: _wordsHolder

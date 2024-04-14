@@ -171,6 +171,11 @@ PrefabInstance:
       propertyPath: _summoningSpellId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2776464099016630194, guid: 055f2f546b4adb14aabb692a7a6572c3,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055f2f546b4adb14aabb692a7a6572c3, type: 3}
 --- !u!224 &2333980417572530265 stripped
@@ -305,6 +310,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayPotatoBagSpellButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776464099016630194, guid: 055f2f546b4adb14aabb692a7a6572c3,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055f2f546b4adb14aabb692a7a6572c3, type: 3}
@@ -445,6 +455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _summoningSpellId
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776464099016630194, guid: 055f2f546b4adb14aabb692a7a6572c3,
+        type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 055f2f546b4adb14aabb692a7a6572c3, type: 3}

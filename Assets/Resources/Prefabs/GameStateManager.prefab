@@ -47,3 +47,5 @@ MonoBehaviour:
   _wordsHolder: {fileID: 0}
   _initialScreen: {fileID: 0}
   _gamePlayScreen: {fileID: 0}
+  _failWindow: {fileID: 0}
+  _maxWordTime: 10

@@ -15,6 +15,6 @@ namespace UI.Screens.GamePlay
         }
 
         private void OnBackButtonClick() =>
-            GameStateManager.Instance.ToInitial();
+            GameStateManager.Instance.ToInitialScreen();
     }
 }
