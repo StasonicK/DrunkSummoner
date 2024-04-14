@@ -4,6 +4,9 @@ namespace GamePlay.Words
 {
     public class VisibilityChecker : MonoBehaviour
     {
+        [SerializeField] private float _lowerEdge = -0.1f;
+        [SerializeField] private double _upperEdge = 1.1;
+
         private Camera _mainCamera;
         private Vector3 _viewportPosition;
         private Vector3 _cameraViewportToWorldPoint;
@@ -15,24 +18,21 @@ namespace GamePlay.Words
         private void Update()
         {
             _viewportPosition = _mainCamera.WorldToViewportPoint(transform.position);
-            MoveToOpposizeScreenEdge();
+            MoveToOppositeScreenEdge();
         }
 
-        private void MoveToOpposizeScreenEdge()
+        private void MoveToOppositeScreenEdge()
         {
-            if (_viewportPosition.x < 0 || _viewportPosition.x > 1 || _viewportPosition.y < 0 ||
-                _viewportPosition.y > 1)
+            if (_viewportPosition.x < _lowerEdge || _viewportPosition.x > _upperEdge ||
+                _viewportPosition.y < _lowerEdge ||
+                _viewportPosition.y > _upperEdge)
             {
                 _newPosition = transform.localPosition;
 
                 switch (_viewportPosition.x)
                 {
                     case < 0:
-                        // _cameraViewportToWorldPoint = _mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0));
-                        _newPosition.x = -_newPosition.x;
-                        break;
                     case > 1:
-                        // _cameraViewportToWorldPoint = _mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0));
                         _newPosition.x = -_newPosition.x;
                         break;
                     default:
@@ -40,11 +40,7 @@ namespace GamePlay.Words
                         switch (_viewportPosition.y)
                         {
                             case < 0:
-                                // _cameraViewportToWorldPoint = _mainCamera.ViewportToWorldPoint(new Vector3(0, 1, 0));
-                                _newPosition.y = -_newPosition.y;
-                                break;
                             case > 1:
-                                // _cameraViewportToWorldPoint = _mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0));
                                 _newPosition.y = -_newPosition.y;
                                 break;
                         }
@@ -54,10 +50,6 @@ namespace GamePlay.Words
                 }
 
                 transform.localPosition = _newPosition;
-                // transform.localPosition = transform.InverseTransformPoint(new Vector3(_cameraViewportToWorldPoint.x,
-                //     _cameraViewportToWorldPoint.y, _zDefaultPosition));
-                // transform.position = new Vector3(_cameraViewportToWorldPoint.x, _cameraViewportToWorldPoint.y,
-                //     _zDefaultPosition);
             }
         }
     }

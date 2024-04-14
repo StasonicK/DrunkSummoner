@@ -442,15 +442,23 @@ MonoBehaviour:
   - _gameObject: {fileID: 2021142240}
     _prefab: Assets/Resources/Prefabs/Main Camera.prefab
   - _gameObject: {fileID: 434855679}
-    _prefab: Assets/Resources/Prefabs/WordsHolder.prefab
+    _prefab: Assets/Resources/Prefabs/LettersHolder.prefab
   - _gameObject: {fileID: 2929787842629111616}
-    _prefab: Assets/Resources/Prefabs/Words/StraightLineMovementWord.prefab
+    _prefab: Assets/Resources/Prefabs/Letters/StraightLineMovementLetter.prefab
+  - _gameObject: {fileID: 2929787842629111617}
+    _prefab: Assets/Resources/Prefabs/Letters/DiagonalMovementLetter.prefab
   - _gameObject: {fileID: 839866801}
     _prefab: Assets/Resources/Prefabs/Level.prefab
   - _gameObject: {fileID: 34548970}
     _prefab: Assets/Resources/Prefabs/GUI/UI.prefab
   - _gameObject: {fileID: 1431535090}
     _prefab: Assets/Resources/Prefabs/GUI/InitialScreen.prefab
+  - _gameObject: {fileID: 830923711655335529}
+    _prefab: Assets/Resources/Prefabs/GUI/PlaySpellButton.prefab
+  - _gameObject: {fileID: 830923711655335531}
+    _prefab: Assets/Resources/Prefabs/GUI/PlaySpellButton.prefab
+  - _gameObject: {fileID: 830923711655335530}
+    _prefab: Assets/Resources/Prefabs/GUI/PlaySpellButton.prefab
   - _gameObject: {fileID: 2034371334}
     _prefab: Assets/Resources/Prefabs/GUI/GamePlayScreen.prefab
   - _gameObject: {fileID: 2044191402}
@@ -481,11 +489,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI
-      objectReference: {fileID: 0}
-    - target: {fileID: 830923711688571522, guid: b0c444e45ce42c74693ee76a0838769f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 830923711688571526, guid: b0c444e45ce42c74693ee76a0838769f,
         type: 3}
@@ -594,6 +597,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0c444e45ce42c74693ee76a0838769f, type: 3}
+--- !u!1 &830923711655335529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 830923712676092933, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &830923711655335530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5541967061124091421, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &830923711655335531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4558468678964133086, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2929787842629111615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -671,6 +692,12 @@ PrefabInstance:
 --- !u!1 &2929787842629111616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4059473035125250013, guid: 3b9b8914da876b843955de56119cb659,
+    type: 3}
+  m_PrefabInstance: {fileID: 2929787842629111615}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2929787842629111617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1194149939849649912, guid: 3b9b8914da876b843955de56119cb659,
     type: 3}
   m_PrefabInstance: {fileID: 2929787842629111615}
   m_PrefabAsset: {fileID: 0}
@@ -812,14 +839,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
         type: 3}
-      propertyPath: _wordsHolder
-      value: 
-      objectReference: {fileID: 434855681}
-    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
-        type: 3}
       propertyPath: _initialScreen
       value: 
       objectReference: {fileID: 1431535090}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
+      propertyPath: _lettersHolder
+      value: 
+      objectReference: {fileID: 434855681}
     - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
         type: 3}
       propertyPath: _gamePlayScreen

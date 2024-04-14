@@ -10,8 +10,10 @@ namespace UI.Screens.GamePlay
         [SerializeField] private Transform _parent;
 
         private List<WordItem> _wordItems;
+
         private int _difference;
 
+// TODO wrong letters count
         public void CreateEmptyWords(int max)
         {
             if (_wordItems != null)

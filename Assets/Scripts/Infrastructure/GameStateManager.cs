@@ -41,6 +41,7 @@ namespace Infrastructure
 
         public void ToInitial()
         {
+            _currentWordIndex = 0;
             _wordsHolder.HideAll();
             _initialScreen.SetActive(true);
             _gamePlayScreen.SetActive(false);
@@ -49,22 +50,31 @@ namespace Infrastructure
                 .ToDictionary(x => x.SummoningSpellId, x => x);
         }
 
-        public void ToGamePlay()
+        public void ToGamePlay(SummoningSpellId summoningSpellId)
         {
-            _summoningSpellStaticData = _summoningSpells[SummoningSpellId.PotatoBag];
-            _wordsHolder.HideAll();
-            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex]);
+            _currentWordIndex = 0;
+            _summoningSpellStaticData = _summoningSpells[summoningSpellId];
+            ShowNextLetter();
             _initialScreen.SetActive(false);
             _gamePlayScreen.SetActive(true);
-            WordCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
+            WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
         }
 
-        public void WordCatched()
+        public void LetterCatched()
         {
-            WordCounter.Instance.IncreaseCount();
-            _currentWordIndex++;
+            WordsCounter.Instance.IncreaseCount();
+            ShowNextLetter();
+        }
+
+        private void ShowNextLetter()
+        {
             _wordsHolder.HideAll();
+
+            if (_currentWordIndex > _summoningSpellStaticData.WordMovements.Length - 1)
+                return;
+
             _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex]);
+            _currentWordIndex++;
         }
     }
 }
