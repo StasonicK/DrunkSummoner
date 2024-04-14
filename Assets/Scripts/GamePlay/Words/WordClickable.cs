@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Infrastructure;
+using UnityEngine;
 
 namespace GamePlay.Words
 {
@@ -7,6 +8,7 @@ namespace GamePlay.Words
         private void OnMouseDown()
         {
             Debug.Log($"OnMouseDown on: {gameObject.name}");
+            GameStateManager.Instance.WordCatched();
         }
     }
 }

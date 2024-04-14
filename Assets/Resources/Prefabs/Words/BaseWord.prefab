@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 2278573260429221808}
   - component: {fileID: 4228421971130676485}
   m_Layer: 20
-  m_Name: Word
+  m_Name: BaseWord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
