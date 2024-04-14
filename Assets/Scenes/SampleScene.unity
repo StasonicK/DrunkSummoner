@@ -442,11 +442,11 @@ MonoBehaviour:
   - _gameObject: {fileID: 2021142240}
     _prefab: Assets/Resources/Prefabs/Main Camera.prefab
   - _gameObject: {fileID: 434855679}
-    _prefab: Assets/Resources/Prefabs/LettersHolder.prefab
+    _prefab: Assets/Resources/Prefabs/WordsHolder.prefab
   - _gameObject: {fileID: 2929787842629111616}
-    _prefab: Assets/Resources/Prefabs/Letters/StraightLineMovementLetter.prefab
+    _prefab: Assets/Resources/Prefabs/Words/StraightLineMovementWord.prefab
   - _gameObject: {fileID: 2929787842629111617}
-    _prefab: Assets/Resources/Prefabs/Letters/DiagonalMovementLetter.prefab
+    _prefab: Assets/Resources/Prefabs/Words/DiagonalMovementWord.prefab
   - _gameObject: {fileID: 839866801}
     _prefab: Assets/Resources/Prefabs/Level.prefab
   - _gameObject: {fileID: 34548970}
