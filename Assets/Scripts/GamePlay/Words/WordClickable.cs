@@ -7,7 +7,7 @@ namespace GamePlay.Words
     {
         private void OnMouseDown()
         {
-            GameStateManager.Instance.LetterCatched();
+            GameStateManager.Instance.WordCatched();
         }
     }
 }

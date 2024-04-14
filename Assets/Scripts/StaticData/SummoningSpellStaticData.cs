@@ -9,5 +9,6 @@ namespace StaticData
     {
         public SummoningSpellId SummoningSpellId;
         public WordMovement[] WordMovements;
+        public float FailThreshold;
     }
 }

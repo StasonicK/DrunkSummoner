@@ -18,6 +18,6 @@ namespace UI.Screens.Initial
         }
 
         private void OnPlayButtonClick() =>
-            GameStateManager.Instance.ToGamePlay(_summoningSpellId);
+            GameStateManager.Instance.StartGamePlay(_summoningSpellId);
     }
 }

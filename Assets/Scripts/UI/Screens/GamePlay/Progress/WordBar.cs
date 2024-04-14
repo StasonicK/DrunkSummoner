@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace UI.Screens.GamePlay
+namespace UI.Screens.GamePlay.Progress
 {
     public class WordBar : MonoBehaviour
     {
@@ -13,7 +13,6 @@ namespace UI.Screens.GamePlay
 
         private int _difference;
 
-// TODO wrong letters count
         public void CreateEmptyWords(int max)
         {
             if (_wordItems != null)

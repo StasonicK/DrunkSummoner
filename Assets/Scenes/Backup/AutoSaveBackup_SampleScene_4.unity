@@ -839,14 +839,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
         type: 3}
+      propertyPath: _wordsHolder
+      value: 
+      objectReference: {fileID: 434855681}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
       propertyPath: _initialScreen
       value: 
       objectReference: {fileID: 1431535090}
-    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
-        type: 3}
-      propertyPath: _lettersHolder
-      value: 
-      objectReference: {fileID: 434855681}
     - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
         type: 3}
       propertyPath: _gamePlayScreen
