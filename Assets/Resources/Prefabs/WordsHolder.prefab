@@ -58,7 +58,7 @@ PrefabInstance:
     - target: {fileID: 3613372410749616965, guid: 066b5c32d4eea014eb991dd0a6c3eea4,
         type: 3}
       propertyPath: m_Name
-      value: DiagonalMoveWord
+      value: DiagonalMovementWord
       objectReference: {fileID: 0}
     - target: {fileID: 8415154816270105276, guid: 066b5c32d4eea014eb991dd0a6c3eea4,
         type: 3}

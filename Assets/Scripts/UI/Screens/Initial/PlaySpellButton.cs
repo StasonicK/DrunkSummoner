@@ -1,11 +1,14 @@
+using GamePlay.SummoningSpells;
 using Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Screens.Initial
 {
-    public class PlayButton : MonoBehaviour
+    public class PlaySpellButton : MonoBehaviour
     {
+        [SerializeField] private SummoningSpellId _summoningSpellId;
+
         private Button _playButton;
 
         private void Awake()
@@ -15,6 +18,6 @@ namespace UI.Screens.Initial
         }
 
         private void OnPlayButtonClick() =>
-            GameStateManager.Instance.ToGamePlay();
+            GameStateManager.Instance.ToGamePlay(_summoningSpellId);
     }
 }

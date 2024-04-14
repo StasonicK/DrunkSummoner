@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &830923711688571526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -109,11 +109,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 830923711688571526}
     m_Modifications:
-    - target: {fileID: 7422771979999427165, guid: a7aabdb4200ab9d45af73ca1a4fe75b4,
+    - target: {fileID: 7422771979096366275, guid: a7aabdb4200ab9d45af73ca1a4fe75b4,
         type: 3}
-      propertyPath: _gamePlayScreen
-      value: 
-      objectReference: {fileID: 830923712884137326}
+      propertyPath: m_text
+      value: Play potato bag spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422771979096366275, guid: a7aabdb4200ab9d45af73ca1a4fe75b4,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 33.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7422771980273602012, guid: a7aabdb4200ab9d45af73ca1a4fe75b4,
         type: 3}
       propertyPath: m_Pivot.x
@@ -367,12 +372,6 @@ PrefabInstance:
       objectReference: {fileID: 830923712415476634}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 718c0d144971cf545816a3721291448e, type: 3}
---- !u!1 &830923712884137326 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7343144645620493339, guid: 718c0d144971cf545816a3721291448e,
-    type: 3}
-  m_PrefabInstance: {fileID: 7953391648181662069}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &830923712884137327 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7343144645620493338, guid: 718c0d144971cf545816a3721291448e,

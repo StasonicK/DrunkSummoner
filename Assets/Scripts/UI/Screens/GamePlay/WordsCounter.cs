@@ -2,9 +2,9 @@
 
 namespace UI.Screens.GamePlay
 {
-    public class WordCounter : MonoBehaviour
+    public class WordsCounter : MonoBehaviour
     {
-        private static WordCounter _instance;
+        private static WordsCounter _instance;
 
         private WordBar _wordBar;
         private int _totalCount;
@@ -15,12 +15,12 @@ namespace UI.Screens.GamePlay
             _wordBar = GetComponent<WordBar>();
         }
 
-        public static WordCounter Instance
+        public static WordsCounter Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = FindObjectOfType<WordCounter>();
+                    _instance = FindObjectOfType<WordsCounter>();
 
                 return _instance;
             }
