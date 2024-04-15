@@ -20,3 +20,13 @@ MonoBehaviour:
   - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
   MoneyReward: 20
   FailThreshold: 0
+  Signs:
+  - {fileID: 1131816344, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: 1410531032, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: 1049004237, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: -1659353585, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  AudioClips:
+  - {fileID: 8300000, guid: f1d92ee2a4908884d88599664f593a03, type: 3}
+  - {fileID: 8300000, guid: 064ff4418ee7b394d9efe12ffa34f594, type: 3}
+  - {fileID: 8300000, guid: 942be369409a9614195eb6d0cea913aa, type: 3}
+  - {fileID: 8300000, guid: 380e79f2c2e7b324f8a49a70ffea1481, type: 3}

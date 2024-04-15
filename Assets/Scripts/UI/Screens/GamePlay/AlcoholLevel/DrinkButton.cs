@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Audio;
 using UI.Screens.GamePlay.Economy;
 using UnityEngine;
 using UnityEngine.UI;
@@ -62,9 +63,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
                 return;
 
             if (Money.Instance.TryReduceMoney(_addAlcoholLevelPrice))
-            {
                 StartCoroutine(CoroutineDrink());
-            }
         }
 
         private IEnumerator CoroutineDrink()
@@ -72,12 +71,13 @@ namespace UI.Screens.GamePlay.AlcoholLevel
             _drinkingProgress = true;
             _animator.Play(DRINKING_ANIMATION_STATE);
 
-            while (_currentTime <= _drinkDelayPerSecond)
-            {
-                _currentTime += Time.deltaTime;
-                yield return null;
-            }
+            // while (_currentTime <= _drinkDelayPerSecond)
+            // {
+            //     _currentTime += Time.deltaTime;
+            //     yield return null;
+            // }
 
+            AudioManager.Instance.PlayAudio(AudioTrack.DrinkBeerSoundFx);
             _alcoholLevel.TryAddAlcoholLevel(_addAlcoholLevelValue / DELIMETER_VALUE);
 
             while (_currentTime <= _fullDrinkDelayPerSecond)

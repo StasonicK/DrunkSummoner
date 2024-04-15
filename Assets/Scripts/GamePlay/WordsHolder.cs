@@ -1,4 +1,5 @@
-﻿using GamePlay.Words.Movement;
+﻿using GamePlay.Words;
+using GamePlay.Words.Movement;
 using UnityEngine;
 
 namespace GamePlay
@@ -11,18 +12,22 @@ namespace GamePlay
         private void Awake() =>
             HideAll();
 
-        public void Show(WordMovement wordMovement)
+        public void Show(WordMovement wordMovement, Sprite sprite)
         {
             switch (wordMovement)
             {
                 case StraightLineWordMovement:
                     _straightLineWordMovement.gameObject.SetActive(true);
+                    _straightLineWordMovement.gameObject.GetComponent<WordSignSetter>().Set(sprite);
                     break;
                 case DiagonalWordMovement:
                     _diagonalWordMovement.gameObject.SetActive(true);
+                    _straightLineWordMovement.gameObject.GetComponent<WordSignSetter>().Set(sprite);
                     break;
             }
         }
+
+        // private void SetAudio(AudioClip)
 
         public void HideAll()
         {

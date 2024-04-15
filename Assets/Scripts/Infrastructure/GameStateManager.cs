@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Audio;
 using GamePlay;
 using GamePlay.SummoningSpells;
 using StaticData;
@@ -64,21 +65,26 @@ namespace Infrastructure
 
         public void StartGamePlay(SummoningSpellId summoningSpellId)
         {
+            _failWindow.gameObject.SetActive(false);
+            _successWindow.gameObject.SetActive(false);
+            _initialScreen.SetActive(false);
+            _gamePlayScreen.SetActive(true);
             _currentWordIndex = 0;
             _summoningSpellStaticData = _summoningSpells[summoningSpellId];
             ShowNextWord();
-            _initialScreen.SetActive(false);
-            _gamePlayScreen.SetActive(true);
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
             Timer.Instance.Construct(_maxWordTime);
             Timer.Instance.Start();
             AlcoholLevel.Instance.Start();
             Money.Instance.Start();
             DrinkButton.Instance.On();
+            AudioManager.Instance.SetCreatedObjectAudioClip(_summoningSpellStaticData.SummoningSpellId);
         }
 
         public void RestartGamePlay()
         {
+            _failWindow.gameObject.SetActive(false);
+            _successWindow.gameObject.SetActive(false);
             _currentWordIndex = 0;
             ShowNextWord();
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
@@ -91,6 +97,7 @@ namespace Infrastructure
 
         public void WordCatched()
         {
+            AudioManager.Instance.PlayWord();
             WordsCounter.Instance.IncreaseCount();
 
             if (_currentWordIndex < _summoningSpellStaticData.WordMovements.Length)
@@ -106,6 +113,8 @@ namespace Infrastructure
 
         private void Success()
         {
+            AudioManager.Instance.PlayCreatedObject();
+            AudioManager.Instance.PlayAudio(AudioTrack.WinSoundFx);
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
@@ -120,12 +129,15 @@ namespace Infrastructure
         private void ShowNextWord()
         {
             _wordsHolder.HideAll();
-            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex]);
+            AudioManager.Instance.SetWordAudioClip(_summoningSpellStaticData.AudioClips[_currentWordIndex]);
+            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex],
+                _summoningSpellStaticData.Signs[_currentWordIndex]);
             _currentWordIndex++;
         }
 
         public void ShowFailWindow()
         {
+            AudioManager.Instance.PlayAudio(AudioTrack.WinSoundFx);
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();

@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using Audio;
+using Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ namespace UI.Windows
 
         private void OnBackButtonClick()
         {
+            AudioManager.Instance.PlayAudio(AudioTrack.CloseWindowSoundFx);
             GameStateManager.Instance.ToInitialScreen();
             gameObject.SetActive(false);
         }
