@@ -1,5 +1,5 @@
 ﻿using GamePlay.SummoningSpells;
-using GamePlay.Words;
+using GamePlay.Words.Movement;
 using UnityEngine;
 
 namespace StaticData
@@ -9,5 +9,6 @@ namespace StaticData
     {
         public SummoningSpellId SummoningSpellId;
         public WordMovement[] WordMovements;
+        public float FailThreshold;
     }
 }

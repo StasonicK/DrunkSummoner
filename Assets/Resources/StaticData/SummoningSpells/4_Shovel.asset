@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd193f19b1a046f8b15f1786a9769b1d, type: 3}
+  m_Name: 4_Shovel
+  m_EditorClassIdentifier: 
+  SummoningSpellId: 2
+  WordMovements:
+  - {fileID: 4164665400129123139, guid: 5c69b9e4e6093714fbee69051b32fce9, type: 3}
+  - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
+  - {fileID: 4164665400129123139, guid: 5c69b9e4e6093714fbee69051b32fce9, type: 3}
+  - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
