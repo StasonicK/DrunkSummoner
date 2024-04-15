@@ -147,8 +147,8 @@ RectTransform:
   m_Father: {fileID: 7196015841385576754}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.65, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.35, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -337,8 +337,8 @@ RectTransform:
   m_Father: {fileID: 7196015841385576754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.6, y: 1}
+  m_AnchorMin: {x: 0.4, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -405,7 +405,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 144
   m_fontStyle: 17
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1185,6 +1185,9 @@ MonoBehaviour:
   _alcoholLevel: {fileID: 6690275304820889099}
   _addAlcoholLevelValue: 20
   _addAlcoholLevelPrice: 2
+  _animator: {fileID: 0}
+  _drinkDelayMilliseconds: 60
+  _fullDrinkDelayMilliseconds: 120
 --- !u!1 &6843118666522095476
 GameObject:
   m_ObjectHideFlags: 0
