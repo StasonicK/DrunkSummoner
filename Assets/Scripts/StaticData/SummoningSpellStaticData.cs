@@ -9,6 +9,7 @@ namespace StaticData
     {
         public SummoningSpellId SummoningSpellId;
         public WordMovement[] WordMovements;
+        public int MoneyReward;
         public float FailThreshold;
     }
 }

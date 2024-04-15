@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI.Screens.GamePlay.Economy;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Screens.GamePlay.AlcoholLevel
@@ -7,6 +8,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
     {
         [SerializeField] private AlcoholLevel _alcoholLevel;
         [SerializeField] private float _addAlcoholLevelValue;
+        [SerializeField] private int _addAlcoholLevelPrice;
 
         private Button _button;
 
@@ -22,7 +24,10 @@ namespace UI.Screens.GamePlay.AlcoholLevel
                 AddAlcoholLevel();
         }
 
-        private void AddAlcoholLevel() =>
-            _alcoholLevel.AddAlcoholLevel(_addAlcoholLevelValue / 100);
+        private void AddAlcoholLevel()
+        {
+            if (Money.Instance.TryReduceMoney(_addAlcoholLevelPrice))
+                _alcoholLevel.AddAlcoholLevel(_addAlcoholLevelValue / 100);
+        }
     }
 }

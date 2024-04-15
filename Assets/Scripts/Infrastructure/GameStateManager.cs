@@ -4,6 +4,7 @@ using GamePlay;
 using GamePlay.SummoningSpells;
 using StaticData;
 using UI.Screens.GamePlay.AlcoholLevel;
+using UI.Screens.GamePlay.Economy;
 using UI.Screens.GamePlay.Progress;
 using UI.Screens.GamePlay.Timer;
 using UI.Windows;
@@ -71,6 +72,7 @@ namespace Infrastructure
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
             Timer.Instance.Construct(_maxWordTime);
             Timer.Instance.Start();
+            AlcoholLevel.Instance.Start();
         }
 
         public void RestartGamePlay()
@@ -107,8 +109,8 @@ namespace Infrastructure
             AlcoholLevel.Instance.Stop();
             AlcoholLevel.Instance.SetPreviousLevel();
             ShowSuccessWindow();
+            Money.Instance.AddMoney(_summoningSpellStaticData.MoneyReward);
             // TODO show summoned item/creature
-            // TODO add money
         }
 
         private void ShowNextWord()
