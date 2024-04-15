@@ -9,14 +9,16 @@ namespace UI.Screens.GamePlay.Economy
 
         private static Money _instance;
 
-        private int _moneyCount;
+        private int _currentMoneyCount;
+        private int _previousMoneyCount;
         private int _result;
 
         private void Awake()
         {
             DontDestroyOnLoad(this);
-            _moneyCount = _initialMoneyCount;
-            _moneyCounter.SetMoney(_moneyCount);
+            _currentMoneyCount = _initialMoneyCount;
+            _previousMoneyCount = _initialMoneyCount;
+            _moneyCounter.SetMoney(_currentMoneyCount);
         }
 
         public static Money Instance
@@ -30,20 +32,32 @@ namespace UI.Screens.GamePlay.Economy
             }
         }
 
+        public void Start() =>
+            _previousMoneyCount = _currentMoneyCount;
+
+        public void SetPreviousMoneyCount() =>
+            _previousMoneyCount = _currentMoneyCount;
+
+        public void Restart()
+        {
+            _currentMoneyCount = _previousMoneyCount;
+            _moneyCounter.SetMoney(_currentMoneyCount);
+        }
+
         public void AddMoney(int value)
         {
-            _moneyCount += value;
-            _moneyCounter.SetMoney(_moneyCount);
+            _currentMoneyCount += value;
+            _moneyCounter.SetMoney(_currentMoneyCount);
         }
 
         public bool TryReduceMoney(int value)
         {
-            _result = _moneyCount - value;
+            _result = _currentMoneyCount - value;
 
             if (_result >= 0)
             {
-                _moneyCount -= value;
-                _moneyCounter.SetMoney(_moneyCount);
+                _currentMoneyCount -= value;
+                _moneyCounter.SetMoney(_currentMoneyCount);
                 return true;
             }
 

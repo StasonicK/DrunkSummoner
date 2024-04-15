@@ -17,6 +17,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
         private float _previousLevel;
         private float _currentLevel;
         private Coroutine _startCoroutine;
+        private float _result;
 
         private void Awake()
         {
@@ -65,8 +66,15 @@ namespace UI.Screens.GamePlay.AlcoholLevel
             _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
         }
 
-        public void AddAlcoholLevel(float value) =>
-            _currentLevel += value;
+        public void TryAddAlcoholLevel(float value)
+        {
+            _result = _currentLevel + value;
+
+            if (_result >= _maxLevel)
+                _currentLevel = _maxLevel;
+            else
+                _currentLevel += value;
+        }
 
         private IEnumerator CoroutineUpdateTimeLimitBar()
         {

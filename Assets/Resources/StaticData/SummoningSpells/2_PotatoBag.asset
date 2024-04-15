@@ -16,3 +16,5 @@ MonoBehaviour:
   WordMovements:
   - {fileID: 4164665400129123139, guid: 5c69b9e4e6093714fbee69051b32fce9, type: 3}
   - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
+  MoneyReward: 10
+  FailThreshold: 0

@@ -73,18 +73,20 @@ namespace Infrastructure
             Timer.Instance.Construct(_maxWordTime);
             Timer.Instance.Start();
             AlcoholLevel.Instance.Start();
+            Money.Instance.Start();
+            DrinkButton.Instance.On();
         }
 
         public void RestartGamePlay()
         {
             _currentWordIndex = 0;
             ShowNextWord();
-            // _initialScreen.SetActive(false);
-            // _gamePlayScreen.SetActive(true);
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
             Timer.Instance.Construct(_maxWordTime);
             Timer.Instance.Start();
             AlcoholLevel.Instance.Restart();
+            Money.Instance.Restart();
+            DrinkButton.Instance.On();
         }
 
         public void WordCatched()
@@ -108,8 +110,10 @@ namespace Infrastructure
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
             AlcoholLevel.Instance.SetPreviousLevel();
+            DrinkButton.Instance.Off();
             ShowSuccessWindow();
             Money.Instance.AddMoney(_summoningSpellStaticData.MoneyReward);
+            Money.Instance.SetPreviousMoneyCount();
             // TODO show summoned item/creature
         }
 
@@ -125,6 +129,7 @@ namespace Infrastructure
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
+            DrinkButton.Instance.Off();
             _failWindow.gameObject.SetActive(true);
         }
 
@@ -133,6 +138,7 @@ namespace Infrastructure
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
+            DrinkButton.Instance.Off();
             _successWindow.gameObject.SetActive(true);
         }
     }
