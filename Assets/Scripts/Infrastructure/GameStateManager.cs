@@ -64,11 +64,13 @@ namespace Infrastructure
 
         public void StartGamePlay(SummoningSpellId summoningSpellId)
         {
+            _failWindow.gameObject.SetActive(false);
+            _successWindow.gameObject.SetActive(false);
+            _initialScreen.SetActive(false);
+            _gamePlayScreen.SetActive(true);
             _currentWordIndex = 0;
             _summoningSpellStaticData = _summoningSpells[summoningSpellId];
             ShowNextWord();
-            _initialScreen.SetActive(false);
-            _gamePlayScreen.SetActive(true);
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
             Timer.Instance.Construct(_maxWordTime);
             Timer.Instance.Start();
@@ -79,6 +81,8 @@ namespace Infrastructure
 
         public void RestartGamePlay()
         {
+            _failWindow.gameObject.SetActive(false);
+            _successWindow.gameObject.SetActive(false);
             _currentWordIndex = 0;
             ShowNextWord();
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
@@ -120,7 +124,8 @@ namespace Infrastructure
         private void ShowNextWord()
         {
             _wordsHolder.HideAll();
-            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex]);
+            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex],
+                _summoningSpellStaticData.Signs[_currentWordIndex]);
             _currentWordIndex++;
         }
 

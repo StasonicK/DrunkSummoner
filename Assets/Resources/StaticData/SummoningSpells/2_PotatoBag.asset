@@ -18,3 +18,9 @@ MonoBehaviour:
   - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
   MoneyReward: 10
   FailThreshold: 0
+  Signs:
+  - {fileID: 1129195471, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: -1703192487, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  AudioClips:
+  - {fileID: 8300000, guid: 310fa45cf3a260140b8783c113061e7b, type: 3}
+  - {fileID: 8300000, guid: 238e8b3ccc9795048b5df59235a54735, type: 3}

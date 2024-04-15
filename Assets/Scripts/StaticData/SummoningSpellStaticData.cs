@@ -11,5 +11,7 @@ namespace StaticData
         public WordMovement[] WordMovements;
         public int MoneyReward;
         public float FailThreshold;
+        public Sprite[] Signs;
+        public AudioClip[] AudioClips;
     }
 }

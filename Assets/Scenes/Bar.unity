@@ -448,10 +448,10 @@ MonoBehaviour:
     _prefab: Assets/Resources/Prefabs/Main Camera.prefab
   - _gameObject: {fileID: 2123593560}
     _prefab: Assets/Resources/Prefabs/WordsHolder.prefab
-  - _gameObject: {fileID: 2123593559}
-    _prefab: Assets/Resources/Prefabs/Words/StraightLineMovementWord.prefab
   - _gameObject: {fileID: 2123593558}
     _prefab: Assets/Resources/Prefabs/Words/DiagonalMovementWord.prefab
+  - _gameObject: {fileID: 2123593559}
+    _prefab: Assets/Resources/Prefabs/Words/StraightLineMovementWord.prefab
   - _gameObject: {fileID: 1134868211}
     _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Drink_02.fbx
   - _gameObject: {fileID: 1299682801}
