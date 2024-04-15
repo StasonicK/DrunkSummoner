@@ -1,22 +1,20 @@
-using Infrastructure;
+﻿using Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Screens.GamePlay
+namespace UI.Windows
 {
-    public class BackButton : MonoBehaviour
+    public class SuccessWindow : MonoBehaviour
     {
-        private Button _backButton;
+        [SerializeField] private Button _backButton;
 
-        private void Awake()
-        {
-            _backButton = GetComponent<Button>();
+        private void Awake() =>
             _backButton.onClick.AddListener(OnBackButtonClick);
-        }
 
         private void OnBackButtonClick()
         {
             GameStateManager.Instance.ToInitialScreen();
+            gameObject.SetActive(false);
         }
     }
 }

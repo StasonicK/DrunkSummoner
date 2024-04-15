@@ -463,6 +463,8 @@ MonoBehaviour:
     _prefab: Assets/Resources/Prefabs/GUI/Screens/GamePlayScreen.prefab
   - _gameObject: {fileID: 830923711655335532}
     _prefab: Assets/Resources/Prefabs/GUI/Windows/FailWindow.prefab
+  - _gameObject: {fileID: 753178608063734439}
+    _prefab: Assets/Resources/Prefabs/GUI/Windows/SuccessWindow.prefab
   - _gameObject: {fileID: 2044191402}
     _prefab: Assets/Resources/Prefabs/GameStateManager.prefab
 --- !u!4 &2046696553
@@ -480,6 +482,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &753178608063734439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 142948891965633743, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830923711655335528
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -487,6 +495,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 142948891965633743, guid: b0c444e45ce42c74693ee76a0838769f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 830923711688571522, guid: b0c444e45ce42c74693ee76a0838769f,
         type: 3}
       propertyPath: m_Name
@@ -595,11 +608,6 @@ PrefabInstance:
     - target: {fileID: 830923711688571526, guid: b0c444e45ce42c74693ee76a0838769f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317345824437803068, guid: b0c444e45ce42c74693ee76a0838769f,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -795,6 +803,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f9b47298928b46418f5d8a61536903a, type: 3}
+--- !u!114 &5379001265002279586 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6450698511425136225, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 830923711655335528}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753178608063734439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8554b2d86363443789925befd02836fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5559287356686903107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -877,6 +897,11 @@ PrefabInstance:
       propertyPath: _initialScreen
       value: 
       objectReference: {fileID: 1431535090}
+    - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
+        type: 3}
+      propertyPath: _successWindow
+      value: 
+      objectReference: {fileID: 5379001265002279586}
     - target: {fileID: 7287465793627852992, guid: 422bf727e7666394d954b0c54a4e8112,
         type: 3}
       propertyPath: _gamePlayScreen

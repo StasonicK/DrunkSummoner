@@ -2,42 +2,40 @@
 using Infrastructure;
 using UnityEngine;
 
-namespace UI.Screens.GamePlay.Timer
+namespace UI.Screens.GamePlay.AlcoholLevel
 {
-    public class Timer : MonoBehaviour
+    public class AlcoholLevel : MonoBehaviour
     {
         [SerializeField] [Range(0f, 1f)] private float _speedMultiplier;
 
         private const float FAIL_THRESHOLD = 0f;
 
-        private static Timer _instance;
+        private static AlcoholLevel _instance;
 
-        private TimeLimitBar _timeLimitBar;
-        private float _maxTime;
-        private float _currentTime;
+        private AlcoholLevelBar _alcoholLevelBar;
+        private float _maxLevel;
+        private float _previousLevel;
+        private float _currentLevel;
         private Coroutine _startCoroutine;
 
         private void Awake()
         {
             DontDestroyOnLoad(this);
-            _timeLimitBar = GetComponent<TimeLimitBar>();
+            _alcoholLevelBar = GetComponent<AlcoholLevelBar>();
+            _maxLevel = _alcoholLevelBar.MaxSliderValue;
+            _currentLevel = _maxLevel;
+            _previousLevel = _maxLevel;
         }
 
-        public static Timer Instance
+        public static AlcoholLevel Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = FindObjectOfType<Timer>();
+                    _instance = FindObjectOfType<AlcoholLevel>();
 
                 return _instance;
             }
-        }
-
-        public void Construct(float maxTime)
-        {
-            _maxTime = maxTime;
-            _currentTime = maxTime;
         }
 
         public void Start()
@@ -48,27 +46,34 @@ namespace UI.Screens.GamePlay.Timer
             _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
         }
 
+        public void SetPreviousLevel() =>
+            _previousLevel = _currentLevel;
+
         public void Stop()
         {
             if (_startCoroutine != null)
                 StopCoroutine(_startCoroutine);
         }
 
-        public void Reset()
+        public void Restart()
         {
+            _currentLevel = _previousLevel;
+
             if (_startCoroutine != null)
                 StopCoroutine(_startCoroutine);
 
-            _currentTime = _maxTime;
-            _timeLimitBar.SetValue(_currentTime, _maxTime);
+            _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
         }
+
+        public void AddAlcoholLevel(float value) =>
+            _currentLevel += value;
 
         private IEnumerator CoroutineUpdateTimeLimitBar()
         {
-            while (_currentTime > FAIL_THRESHOLD)
+            while (_currentLevel > FAIL_THRESHOLD)
             {
                 UpdateTimeLimitBar();
-                _currentTime -= Time.deltaTime * _speedMultiplier;
+                _currentLevel -= Time.deltaTime * _speedMultiplier;
                 yield return null;
             }
 
@@ -76,6 +81,6 @@ namespace UI.Screens.GamePlay.Timer
         }
 
         private void UpdateTimeLimitBar() =>
-            _timeLimitBar.SetValue(_currentTime, _maxTime);
+            _alcoholLevelBar.SetValue(_currentLevel, _maxLevel);
     }
 }

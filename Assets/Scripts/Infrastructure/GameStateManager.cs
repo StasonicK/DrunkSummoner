@@ -3,6 +3,7 @@ using System.Linq;
 using GamePlay;
 using GamePlay.SummoningSpells;
 using StaticData;
+using UI.Screens.GamePlay.AlcoholLevel;
 using UI.Screens.GamePlay.Progress;
 using UI.Screens.GamePlay.Timer;
 using UI.Windows;
@@ -18,6 +19,7 @@ namespace Infrastructure
         [SerializeField] private GameObject _gamePlayScreen;
 
         [SerializeField] private FailWindow _failWindow;
+        [SerializeField] private SuccessWindow _successWindow;
 
         [SerializeField] private float _maxWordTime = 10f;
 
@@ -52,6 +54,8 @@ namespace Infrastructure
             _wordsHolder.HideAll();
             _initialScreen.SetActive(true);
             _gamePlayScreen.SetActive(false);
+            _failWindow.gameObject.SetActive(false);
+            _successWindow.gameObject.SetActive(false);
             _summoningSpells = Resources
                 .LoadAll<SummoningSpellStaticData>(SummoningSpellsPath)
                 .ToDictionary(x => x.SummoningSpellId, x => x);
@@ -78,6 +82,7 @@ namespace Infrastructure
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
             Timer.Instance.Construct(_maxWordTime);
             Timer.Instance.Start();
+            AlcoholLevel.Instance.Restart();
         }
 
         public void WordCatched()
@@ -99,6 +104,9 @@ namespace Infrastructure
         {
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
+            AlcoholLevel.Instance.Stop();
+            AlcoholLevel.Instance.SetPreviousLevel();
+            ShowSuccessWindow();
             // TODO show summoned item/creature
             // TODO add money
         }
@@ -113,7 +121,17 @@ namespace Infrastructure
         public void ShowFailWindow()
         {
             _wordsHolder.HideAll();
+            Timer.Instance.Stop();
+            AlcoholLevel.Instance.Stop();
             _failWindow.gameObject.SetActive(true);
+        }
+
+        public void ShowSuccessWindow()
+        {
+            _wordsHolder.HideAll();
+            Timer.Instance.Stop();
+            AlcoholLevel.Instance.Stop();
+            _successWindow.gameObject.SetActive(true);
         }
     }
 }
