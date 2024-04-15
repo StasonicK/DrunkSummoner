@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 1618189620606736970}
   - component: {fileID: 2439593615185548783}
   - component: {fileID: 450318448780828965}
-  m_Layer: 0
+  - component: {fileID: 2821648560238599454}
+  - component: {fileID: 3651266147338106071}
+  m_Layer: 19
   m_Name: shovel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,3 +85,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2821648560238599454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107445268991262960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29864925, y: 1.2264498, z: 0.1675326}
+  m_Center: {x: -0.0000000016591724, y: -0.05398673, z: 0.026973732}
+--- !u!54 &3651266147338106071
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107445268991262960}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 122
+  m_CollisionDetection: 0

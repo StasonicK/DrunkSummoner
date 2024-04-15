@@ -1878,10 +1878,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9213206596740143703}
+  - component: {fileID: 703782685081336555}
   - component: {fileID: 54186851546604756}
-  - component: {fileID: 136373561480327732}
-  - component: {fileID: 723265912}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Chicken
   m_TagString: Chicken
   m_Icon: {fileID: 0}
@@ -1904,6 +1903,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &703782685081336555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213206596740143696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!54 &54186851546604756
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1918,40 +1930,8 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 110
-  m_CollisionDetection: 3
---- !u!136 &136373561480327732
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9213206596740143696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &723265912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9213206596740143696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7e021d804bceb74489e88b15f242c7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FrontLegL: {fileID: 0}
-  FrontLegR: {fileID: 0}
-  RearLegL: {fileID: 0}
-  RearLegR: {fileID: 0}
-  moveAngle: 90
-  movSpeed: 1
+  m_Constraints: 122
+  m_CollisionDetection: 0
 --- !u!1 &9213206596849299574
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,12 +22,13 @@ namespace Audio
         [SerializeField] private AudioSource _summonerSoundAudio;
         [SerializeField] private AudioSource _creationSoundSoundAudio;
 
-        private AudioClip _currentWordAudioClip;
-        private AudioClip _currentCreatedObjectAudioClip;
-
         private const float MAX_VOLUME = 1.0f;
 
         private static AudioManager _instance;
+        
+        private AudioClip _currentWordAudioClip;
+        private AudioClip _currentCreatedObjectAudioClip;
+
         private float _volume;
 
         private void Awake() =>

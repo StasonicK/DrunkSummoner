@@ -2,6 +2,7 @@
 using System.Linq;
 using Audio;
 using GamePlay;
+using GamePlay.SummonedObjects;
 using GamePlay.SummoningSpells;
 using StaticData;
 using UI.Screens.GamePlay.AlcoholLevel;
@@ -123,6 +124,8 @@ namespace Infrastructure
             ShowSuccessWindow();
             Money.Instance.AddMoney(_summoningSpellStaticData.MoneyReward);
             Money.Instance.SetPreviousMoneyCount();
+            Summoner.Instance.OffAll();
+            Summoner.Instance.Summon(_summoningSpellStaticData.SummoningSpellId);
             // TODO show summoned item/creature
         }
 
