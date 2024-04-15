@@ -902,7 +902,7 @@ Transform:
   - {fileID: 86500475}
   - {fileID: 1293132016}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &351067793
 GameObject:
@@ -1380,6 +1380,81 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 546097523}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &581226460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9213206596740143696, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_Name
+      value: Chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.703
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.085
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.79335326
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.60876167
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 9213206596740143703, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3bd4eb13459efc04fb4e6097b0ca719f, type: 3}
+--- !u!1 &581226461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9213206596740143696, guid: 3bd4eb13459efc04fb4e6097b0ca719f,
+    type: 3}
+  m_PrefabInstance: {fileID: 581226460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &614681769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1492,57 +1567,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scenePrefabInstances:
   - _gameObject: {fileID: 126846890}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Drink_02.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Drink_02.fbx
+  - _gameObject: {fileID: 581226461}
+    _prefab: Assets/Resources/Prefabs/SummonedItems/Chicken.prefab
   - _gameObject: {fileID: 1723345814}
-    _prefab: Assets/_ours/Prefabs/Light.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Light.prefab
   - _gameObject: {fileID: 495356782}
-    _prefab: Assets/_ours/Prefabs/Light.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Light.prefab
   - _gameObject: {fileID: 965627853}
-    _prefab: Assets/_ours/Prefabs/Light.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Light.prefab
   - _gameObject: {fileID: 2080610985}
-    _prefab: Assets/_ours/Prefabs/Light.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Light.prefab
   - _gameObject: {fileID: 1656592825}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 237297691}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 1750985629}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 754820330}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 1214681027}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 999161361}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 1421861695}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 1610890705}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 675681718}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 2077403654}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 1160405006}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 1014241181}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 360257799}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 991272697}
-    _prefab: Assets/_ours/Prefabs/Table.prefab
+    _prefab: Assets/Resources/Prefabs/SceneObjects/Table.prefab
   - _gameObject: {fileID: 175514133}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 121282495}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 614681771}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 1977043091}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 728024231}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 789677423}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
   - _gameObject: {fileID: 320588822}
-    _prefab: Assets/_ours/Prefabs/SM_Prop_Chair_05.fbx
+    _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Chair_05.fbx
 --- !u!4 &657079689
 Transform:
   m_ObjectHideFlags: 11
@@ -1556,7 +1633,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &675681716
 PrefabInstance:
@@ -3667,7 +3744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 16.069, y: -30, z: 0}
 --- !u!114 &1631024929
 MonoBehaviour:
@@ -3806,7 +3883,7 @@ Transform:
   - {fileID: 810483677}
   - {fileID: 1040330042}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721910855
 GameObject:
@@ -4111,7 +4188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1800137808
 GameObject:
