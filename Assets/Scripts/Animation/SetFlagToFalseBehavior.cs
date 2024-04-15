@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class SetFlagToFalseBehavior : StateMachineBehaviour
+namespace Animation
 {
-    // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public class SetFlagToFalseBehavior : StateMachineBehaviour
     {
-        animator.SetBool("startSip", false);
+        // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
+        public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+        {
+            animator.SetBool("startSip", false);
+        }
     }
 }

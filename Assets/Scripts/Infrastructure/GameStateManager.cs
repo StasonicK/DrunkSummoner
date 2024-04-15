@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Audio;
 using GamePlay;
 using GamePlay.SummoningSpells;
 using StaticData;
@@ -77,6 +78,7 @@ namespace Infrastructure
             AlcoholLevel.Instance.Start();
             Money.Instance.Start();
             DrinkButton.Instance.On();
+            AudioManager.Instance.SetCreatedObjectAudioClip(_summoningSpellStaticData.SummoningSpellId);
         }
 
         public void RestartGamePlay()
@@ -95,6 +97,7 @@ namespace Infrastructure
 
         public void WordCatched()
         {
+            AudioManager.Instance.PlayWord();
             WordsCounter.Instance.IncreaseCount();
 
             if (_currentWordIndex < _summoningSpellStaticData.WordMovements.Length)
@@ -110,6 +113,8 @@ namespace Infrastructure
 
         private void Success()
         {
+            AudioManager.Instance.PlayCreatedObject();
+            AudioManager.Instance.PlayAudio(AudioTrack.WinSoundFx);
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
@@ -124,6 +129,7 @@ namespace Infrastructure
         private void ShowNextWord()
         {
             _wordsHolder.HideAll();
+            AudioManager.Instance.SetWordAudioClip(_summoningSpellStaticData.AudioClips[_currentWordIndex]);
             _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex],
                 _summoningSpellStaticData.Signs[_currentWordIndex]);
             _currentWordIndex++;
@@ -131,6 +137,7 @@ namespace Infrastructure
 
         public void ShowFailWindow()
         {
+            AudioManager.Instance.PlayAudio(AudioTrack.WinSoundFx);
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
