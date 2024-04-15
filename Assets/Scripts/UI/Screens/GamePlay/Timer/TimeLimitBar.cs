@@ -7,6 +7,9 @@ namespace UI.Screens.GamePlay.Timer
     {
         [SerializeField] private Slider _slider;
 
+        private void Awake() =>
+            _slider.value = _slider.maxValue;
+
         public void SetValue(float current, float max) =>
             _slider.value = current / max;
     }

@@ -14,7 +14,9 @@ namespace UI.Screens.GamePlay
             _backButton.onClick.AddListener(OnBackButtonClick);
         }
 
-        private void OnBackButtonClick() =>
+        private void OnBackButtonClick()
+        {
             GameStateManager.Instance.ToInitialScreen();
+        }
     }
 }

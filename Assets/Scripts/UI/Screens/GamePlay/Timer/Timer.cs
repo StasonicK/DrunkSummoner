@@ -6,6 +6,8 @@ namespace UI.Screens.GamePlay.Timer
 {
     public class Timer : MonoBehaviour
     {
+        [SerializeField] [Range(0f, 1f)] private float _speedMultiplier;
+
         private const float FAIL_THRESHOLD = 0f;
 
         private static Timer _instance;
@@ -66,11 +68,10 @@ namespace UI.Screens.GamePlay.Timer
             while (_currentTime > FAIL_THRESHOLD)
             {
                 UpdateTimeLimitBar();
-                _currentTime -= Time.deltaTime;
+                _currentTime -= Time.deltaTime * _speedMultiplier;
                 yield return null;
             }
 
-            Stop();
             GameStateManager.Instance.ShowFailWindow();
         }
 
