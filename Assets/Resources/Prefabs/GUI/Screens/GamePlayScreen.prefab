@@ -1186,8 +1186,8 @@ MonoBehaviour:
   _addAlcoholLevelValue: 20
   _addAlcoholLevelPrice: 2
   _animator: {fileID: 0}
-  _drinkDelayMilliseconds: 30
-  _fullDrinkDelayMilliseconds: 60
+  _drinkDelayMilliseconds: 20
+  _fullDrinkDelayMilliseconds: 40
 --- !u!1 &6843118666522095476
 GameObject:
   m_ObjectHideFlags: 0

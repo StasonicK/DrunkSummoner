@@ -2,6 +2,7 @@
 using System.Linq;
 using Audio;
 using GamePlay;
+using GamePlay.SummonedObjects;
 using GamePlay.SummoningSpells;
 using StaticData;
 using UI.Screens.GamePlay.AlcoholLevel;
@@ -52,12 +53,13 @@ namespace Infrastructure
 
         public void ToInitialScreen()
         {
-            _currentWordIndex = 1;
+            _currentWordIndex = 0;
             _wordsHolder.HideAll();
             _initialScreen.SetActive(true);
             _gamePlayScreen.SetActive(false);
             _failWindow.gameObject.SetActive(false);
             _successWindow.gameObject.SetActive(false);
+            Summoner.Instance.OffAll();
             _summoningSpells = Resources
                 .LoadAll<SummoningSpellStaticData>(SummoningSpellsPath)
                 .ToDictionary(x => x.SummoningSpellId, x => x);
@@ -123,6 +125,8 @@ namespace Infrastructure
             ShowSuccessWindow();
             Money.Instance.AddMoney(_summoningSpellStaticData.MoneyReward);
             Money.Instance.SetPreviousMoneyCount();
+            Summoner.Instance.OffAll();
+            Summoner.Instance.Summon(_summoningSpellStaticData.SummoningSpellId);
             // TODO show summoned item/creature
         }
 
