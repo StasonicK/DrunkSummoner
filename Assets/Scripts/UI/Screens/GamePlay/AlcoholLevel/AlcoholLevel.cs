@@ -23,9 +23,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
         {
             DontDestroyOnLoad(this);
             _alcoholLevelBar = GetComponent<AlcoholLevelBar>();
-            _maxLevel = _alcoholLevelBar.MaxSliderValue;
-            _currentLevel = _maxLevel;
-            _previousLevel = _maxLevel;
+            SetLevelsToMaxValue();
         }
 
         public static AlcoholLevel Instance
@@ -44,7 +42,16 @@ namespace UI.Screens.GamePlay.AlcoholLevel
             if (_startCoroutine != null)
                 StopCoroutine(_startCoroutine);
 
+            SetLevelsToMaxValue();
             _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
+        }
+
+        private void SetLevelsToMaxValue()
+        {
+            _maxLevel = _alcoholLevelBar.MaxSliderValue;
+            _currentLevel = _maxLevel;
+            _previousLevel = _maxLevel;
+            UpdateTimeLimitBar();
         }
 
         public void SetPreviousLevel() =>
@@ -80,8 +87,8 @@ namespace UI.Screens.GamePlay.AlcoholLevel
         {
             while (_currentLevel > FAIL_THRESHOLD)
             {
-                UpdateTimeLimitBar();
                 _currentLevel -= Time.deltaTime * _speedMultiplier;
+                UpdateTimeLimitBar();
                 yield return null;
             }
 
