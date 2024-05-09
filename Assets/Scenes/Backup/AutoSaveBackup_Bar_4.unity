@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16433854, g: 0.19244719, b: 0.2181101, a: 1}
+  m_IndirectSpecularColor: {r: 0.42596564, g: 0.4584272, b: 0.48461658, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -475,28 +475,22 @@ MonoBehaviour:
     _prefab: Assets/Resources/Prefabs/SummonedObjects.prefab
   - _gameObject: {fileID: 1299682801}
     _prefab: Assets/Resources/Prefabs/SummonedItems/shovel.prefab
-  - _gameObject: {fileID: 4752696548713425048}
-    _prefab: Assets/Resources/Prefabs/Vfxs/BigVfx.prefab
-  - _gameObject: {fileID: 4752696548713425047}
-    _prefab: Assets/Resources/Prefabs/Vfxs/DustDirtyPoof.prefab
-  - _gameObject: {fileID: 4752696548713425046}
-    _prefab: Assets/Resources/Prefabs/Vfxs/FireworkBlue.prefab
   - _gameObject: {fileID: 4752696548713425045}
     _prefab: Assets/Resources/Prefabs/Vfxs/DustDirtyPoof.prefab
   - _gameObject: {fileID: 4752696548713425044}
     _prefab: Assets/Resources/Prefabs/Vfxs/FireworkBlue.prefab
   - _gameObject: {fileID: 1043629025}
     _prefab: Assets/Resources/Prefabs/SummonedItems/Sack.prefab
-  - _gameObject: {fileID: 4752696548713425041}
-    _prefab: Assets/Resources/Prefabs/Vfxs/FireworkBlue.prefab
   - _gameObject: {fileID: 4752696548713425040}
     _prefab: Assets/Resources/Prefabs/Vfxs/DustDirtyPoof.prefab
+  - _gameObject: {fileID: 4752696548713425041}
+    _prefab: Assets/Resources/Prefabs/Vfxs/FireworkBlue.prefab
   - _gameObject: {fileID: 581226461}
     _prefab: Assets/Resources/Prefabs/SummonedItems/Chicken.prefab
-  - _gameObject: {fileID: 4752696548713425043}
-    _prefab: Assets/Resources/Prefabs/Vfxs/FireworkBlue.prefab
   - _gameObject: {fileID: 4752696548713425042}
     _prefab: Assets/Resources/Prefabs/Vfxs/DustDirtyPoof.prefab
+  - _gameObject: {fileID: 4752696548713425043}
+    _prefab: Assets/Resources/Prefabs/Vfxs/FireworkBlue.prefab
   - _gameObject: {fileID: 5785313975127487015}
     _prefab: Assets/Resources/Prefabs/Vfxs/BigVfx.prefab
   - _gameObject: {fileID: 5785313975127487017}
@@ -548,6 +542,11 @@ PrefabInstance:
       propertyPath: _animator
       value: 
       objectReference: {fileID: 2113264820}
+    - target: {fileID: 830923711238666883, guid: b0c444e45ce42c74693ee76a0838769f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 830923711688571522, guid: b0c444e45ce42c74693ee76a0838769f,
         type: 3}
       propertyPath: m_Name
@@ -1219,24 +1218,6 @@ GameObject:
 --- !u!1 &4752696548713425045 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7044285912223403327, guid: 9496298b856196b45aadf22ddfc1c752,
-    type: 3}
-  m_PrefabInstance: {fileID: 4752696548713425039}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4752696548713425046 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7877847573225268881, guid: 9496298b856196b45aadf22ddfc1c752,
-    type: 3}
-  m_PrefabInstance: {fileID: 4752696548713425039}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4752696548713425047 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6045864547152965413, guid: 9496298b856196b45aadf22ddfc1c752,
-    type: 3}
-  m_PrefabInstance: {fileID: 4752696548713425039}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4752696548713425048 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2125821616244608218, guid: 9496298b856196b45aadf22ddfc1c752,
     type: 3}
   m_PrefabInstance: {fileID: 4752696548713425039}
   m_PrefabAsset: {fileID: 0}
