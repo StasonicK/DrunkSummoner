@@ -80,7 +80,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
             AudioManager.Instance.PlayAudio(AudioTrack.DrinkBeerSoundFx);
             _alcoholLevel.TryAddAlcoholLevel(_addAlcoholLevelValue / DELIMETER_VALUE);
 
-            while (_currentTime <= _fullDrinkDelayPerSecond)
+            while (_currentTime <= _drinkDelayPerSecond)
             {
                 _currentTime += Time.deltaTime;
                 yield return null;

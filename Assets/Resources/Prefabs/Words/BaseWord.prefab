@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75493eb80f7f4584928faddc9b3e3ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lowerEdge: -0.1
-  _upperEdge: 1.1
+  _lowerEdge: -0.05
+  _upperEdge: 1.05
 --- !u!114 &6709915625419779373
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -156,7 +156,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8767607331504580237
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -173,7 +173,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5858729770317722861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -260,6 +261,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2929787843302826459}
     m_Modifications:
+    - target: {fileID: 4465368305387252611, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6077448440818543260, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
         type: 3}
       propertyPath: m_Name
