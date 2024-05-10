@@ -8,6 +8,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
 {
     public class DrinkButton : MonoBehaviour
     {
+        [SerializeField] private Button _button;
         [SerializeField] private AlcoholLevel _alcoholLevel;
         [SerializeField] private float _addAlcoholLevelValue;
         [SerializeField] private int _addAlcoholLevelPrice;
@@ -22,7 +23,6 @@ namespace UI.Screens.GamePlay.AlcoholLevel
 
         private static DrinkButton _instance;
 
-        private Button _button;
         private float _currentTime = ZERO_TIME;
         private bool _drinkingProgress;
         private float _drinkDelayPerSecond;
@@ -31,8 +31,13 @@ namespace UI.Screens.GamePlay.AlcoholLevel
         private void Awake()
         {
             DontDestroyOnLoad(this);
-            _button = GetComponent<Button>();
-            _button.onClick.AddListener(TryAddAlcoholLevel);
+
+            if (_button == null)
+                _button = GetComponent<Button>();
+
+            if (_button != null)
+                _button.onClick.AddListener(TryAddAlcoholLevel);
+            
             _drinkDelayPerSecond = _drinkDelayMilliseconds / MILLISECONDS_PER_SECOND;
             _fullDrinkDelayPerSecond = _fullDrinkDelayMilliseconds / MILLISECONDS_PER_SECOND;
         }
