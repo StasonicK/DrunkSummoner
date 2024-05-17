@@ -2,11 +2,6 @@
 
 Platform: PC.
 
-SHORT DESCRIPTION.
-
-"Drunk summoner" is a first person game with 2 game difficulty modes, 3 songs, 4 guns, 5 levels, 6 enemies, progression and destructible environment. Dare!
-
-
 ABOUT THE GAME.
 - You are the hero of the town enjoying your time in a bar!
 - Your skill is to summon things from the void using arcane spells.
