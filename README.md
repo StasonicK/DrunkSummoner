@@ -1,6 +1,6 @@
 # Drunk summoner
 
-![alt text](https://github.com/StasonicK/RunAndBoom/blob/master/DrunkSummonerLogo.png?raw=true)
+![alt text](https://github.com/StasonicK/RunAndBoom/blob/master/DrunkSummonerLogo.PNG?raw=true)
 
 Platform: PC.
 
