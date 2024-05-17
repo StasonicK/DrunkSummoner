@@ -1,4 +1,4 @@
-# Drunk summoner
+# Drunk Summoner
 
 ![alt text](https://github.com/StasonicK/DrunkSummoner/blob/master/DrunkSummonerLogo.png?raw=true)
 
