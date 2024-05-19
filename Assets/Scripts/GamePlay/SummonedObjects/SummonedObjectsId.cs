@@ -1,6 +1,6 @@
 ﻿namespace GamePlay.SummoningSpells
 {
-    public enum SummoningSpellId
+    public enum SummonedObjectsId
     {
         PotatoBag = 0,
         Chicken = 1,

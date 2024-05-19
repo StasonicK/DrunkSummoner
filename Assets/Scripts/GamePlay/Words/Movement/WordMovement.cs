@@ -14,17 +14,17 @@ namespace GamePlay.Words.Movement
         protected int _xDirection;
         protected int _yDirection;
         private bool _move;
-        private Vector3 _initialPosition;
+        // private Vector3 _initialPosition;
 
         private void Awake()
         {
-            _initialPosition = transform.position;
+            // _initialPosition = transform.position;
             ChildAwake();
         }
 
         private void OnEnable()
         {
-            transform.position = _initialPosition;
+            // transform.position = _initialPosition;
             _move = true;
         }
 

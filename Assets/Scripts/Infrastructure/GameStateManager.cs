@@ -30,7 +30,7 @@ namespace Infrastructure
 
         private static GameStateManager _instance;
 
-        private Dictionary<SummoningSpellId, SummoningSpellStaticData> _summoningSpells;
+        private Dictionary<SummonedObjectsId, SummoningSpellStaticData> _summoningSpells;
         private SummoningSpellStaticData _summoningSpellStaticData;
         private int _currentWordIndex;
 
@@ -62,17 +62,17 @@ namespace Infrastructure
             Summoner.Instance.OffAll();
             _summoningSpells = Resources
                 .LoadAll<SummoningSpellStaticData>(SummoningSpellsPath)
-                .ToDictionary(x => x.SummoningSpellId, x => x);
+                .ToDictionary(x => x.SummonedObjectsId, x => x);
         }
 
-        public void StartGamePlay(SummoningSpellId summoningSpellId)
+        public void StartGamePlay(SummonedObjectsId summonedObjectsId)
         {
             _failWindow.gameObject.SetActive(false);
             _successWindow.gameObject.SetActive(false);
             _initialScreen.SetActive(false);
             _gamePlayScreen.SetActive(true);
             _currentWordIndex = 0;
-            _summoningSpellStaticData = _summoningSpells[summoningSpellId];
+            _summoningSpellStaticData = _summoningSpells[summonedObjectsId];
             ShowNextWord();
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
             Timer.Instance.Construct(_maxWordTime);
@@ -80,7 +80,7 @@ namespace Infrastructure
             AlcoholLevel.Instance.Start();
             Money.Instance.Start();
             DrinkButton.Instance.On();
-            AudioManager.Instance.SetCreatedObjectAudioClip(_summoningSpellStaticData.SummoningSpellId);
+            AudioManager.Instance.SetCreatedObjectAudioClip(_summoningSpellStaticData.SummonedObjectsId);
         }
 
         public void RestartGamePlay()
@@ -126,7 +126,7 @@ namespace Infrastructure
             Money.Instance.AddMoney(_summoningSpellStaticData.MoneyReward);
             Money.Instance.SetPreviousMoneyCount();
             Summoner.Instance.OffAll();
-            Summoner.Instance.Summon(_summoningSpellStaticData.SummoningSpellId);
+            Summoner.Instance.Summon(_summoningSpellStaticData.SummonedObjectsId);
             // TODO show summoned item/creature
         }
 

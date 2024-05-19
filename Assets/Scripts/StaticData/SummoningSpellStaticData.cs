@@ -1,13 +1,14 @@
 ﻿using GamePlay.SummoningSpells;
 using GamePlay.Words.Movement;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace StaticData
 {
     [CreateAssetMenu(fileName = "SummoningSpellStaticData", menuName = "StaticData/SummoningSpell")]
     public class SummoningSpellStaticData : ScriptableObject
     {
-        public SummoningSpellId SummoningSpellId;
+        [FormerlySerializedAs("SummoningSpellId")] public SummonedObjectsId SummonedObjectsId;
         public WordMovement[] WordMovements;
         public int MoneyReward;
         public float FailThreshold;
