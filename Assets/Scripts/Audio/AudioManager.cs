@@ -60,17 +60,17 @@ namespace Audio
         public void SetWordAudioClip(AudioClip audioClip) =>
             _currentWordAudioClip = audioClip;
 
-        public void SetCreatedObjectAudioClip(SummoningSpellId summoningSpellId)
+        public void SetCreatedObjectAudioClip(SummonedObjectsId summonedObjectsId)
         {
-            switch (summoningSpellId)
+            switch (summonedObjectsId)
             {
-                case SummoningSpellId.PotatoBag:
+                case SummonedObjectsId.PotatoBag:
                     _currentCreatedObjectAudioClip = _potatoBagCreatedSoundFx;
                     break;
-                case SummoningSpellId.Chicken:
+                case SummonedObjectsId.Chicken:
                     _currentCreatedObjectAudioClip = _chickenCreatedFx;
                     break;
-                case SummoningSpellId.Shovel:
+                case SummonedObjectsId.Shovel:
                     _currentCreatedObjectAudioClip = _shovelCreatedSoundFx;
                     break;
             }

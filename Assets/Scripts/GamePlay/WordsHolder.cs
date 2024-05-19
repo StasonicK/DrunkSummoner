@@ -17,12 +17,12 @@ namespace GamePlay
             switch (wordMovement)
             {
                 case StraightLineWordMovement:
-                    _straightLineWordMovement.gameObject.SetActive(true);
-                    _straightLineWordMovement.gameObject.GetComponent<WordSignSetter>().Set(sprite);
+                    _straightLineWordMovement.GetComponent<WordSignSetter>().Set(sprite);
+                    _straightLineWordMovement.GetComponent<WordRandomRespawn>().SetNewPosition();
                     break;
                 case DiagonalWordMovement:
-                    _diagonalWordMovement.gameObject.SetActive(true);
                     _straightLineWordMovement.gameObject.GetComponent<WordSignSetter>().Set(sprite);
+                    _diagonalWordMovement.GetComponent<WordRandomRespawn>().SetNewPosition();
                     break;
             }
         }

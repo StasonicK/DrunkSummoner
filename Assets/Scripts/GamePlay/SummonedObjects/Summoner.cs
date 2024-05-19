@@ -44,19 +44,19 @@ namespace GamePlay.SummonedObjects
             _potatoBag.gameObject.SetActive(false);
         }
 
-        public void Summon(SummoningSpellId summonedObjectId)
+        public void Summon(SummonedObjectsId summonedObjectId)
         {
             switch (summonedObjectId)
             {
-                case SummoningSpellId.PotatoBag:
+                case SummonedObjectsId.PotatoBag:
                     _potatoBag.transform.position = _potatoBagStartPosition;
                     _potatoBag.gameObject.SetActive(true);
                     break;
-                case SummoningSpellId.Chicken:
+                case SummonedObjectsId.Chicken:
                     _chicken.transform.position = _chickenStartPosition;
                     _chicken.gameObject.SetActive(true);
                     break;
-                case SummoningSpellId.Shovel:
+                case SummonedObjectsId.Shovel:
                     _shovel.transform.position = _shovelStartPosition;
                     _shovel.gameObject.SetActive(true);
                     break;
