@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace UI.Windows
 {
-    public class SuccessWindow : MonoBehaviour
+    public class SuccessWindow : BaseWindow
     {
         [SerializeField] private Button _backButton;
 
@@ -16,7 +16,7 @@ namespace UI.Windows
         {
             AudioManager.Instance.PlayAudio(AudioTrack.CloseWindowSoundFx);
             GameStateManager.Instance.ToInitialScreen();
-            gameObject.SetActive(false);
+            Hide();
         }
     }
 }

@@ -17,13 +17,10 @@ namespace Infrastructure
     public class GameStateManager : MonoBehaviour
     {
         [SerializeField] private WordsHolder _wordsHolder;
-
         [SerializeField] private GameObject _initialScreen;
         [SerializeField] private GameObject _gamePlayScreen;
-
         [SerializeField] private FailWindow _failWindow;
         [SerializeField] private SuccessWindow _successWindow;
-
         [SerializeField] private float _maxWordTime = 10f;
 
         private const string SummoningSpellsPath = "StaticData/SummoningSpells";
@@ -57,8 +54,8 @@ namespace Infrastructure
             _wordsHolder.HideAll();
             _initialScreen.SetActive(true);
             _gamePlayScreen.SetActive(false);
-            _failWindow.gameObject.SetActive(false);
-            _successWindow.gameObject.SetActive(false);
+            _failWindow.Hide();
+            _successWindow.Hide();
             Summoner.Instance.OffAll();
             _summoningSpells = Resources
                 .LoadAll<SummoningSpellStaticData>(SummoningSpellsPath)
@@ -67,8 +64,8 @@ namespace Infrastructure
 
         public void StartGamePlay(SummonedObjectsId summonedObjectsId)
         {
-            _failWindow.gameObject.SetActive(false);
-            _successWindow.gameObject.SetActive(false);
+            _failWindow.Hide();
+            _successWindow.Hide();
             _initialScreen.SetActive(false);
             _gamePlayScreen.SetActive(true);
             _currentWordIndex = 0;
@@ -85,8 +82,8 @@ namespace Infrastructure
 
         public void RestartGamePlay()
         {
-            _failWindow.gameObject.SetActive(false);
-            _successWindow.gameObject.SetActive(false);
+            _failWindow.Hide();
+            _successWindow.Hide();
             _currentWordIndex = 0;
             ShowNextWord();
             WordsCounter.Instance.Construct(_summoningSpellStaticData.WordMovements.Length);
@@ -146,16 +143,16 @@ namespace Infrastructure
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
             DrinkButton.Instance.Off();
-            _failWindow.gameObject.SetActive(true);
+            _failWindow.Show();
         }
 
-        public void ShowSuccessWindow()
+        private void ShowSuccessWindow()
         {
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
             DrinkButton.Instance.Off();
-            _successWindow.gameObject.SetActive(true);
+            _successWindow.Show();
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1532996696347965216}
   - component: {fileID: 7058911963077876827}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: BackgroundSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8326743275467637968}
   - component: {fileID: 1329901842565584768}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: SignSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8713395656230390429}
   - component: {fileID: 5311247423077458797}
-  m_Layer: 20
+  m_Layer: 0
   m_Name: SpriteMask
   m_TagString: Untagged
   m_Icon: {fileID: 0}

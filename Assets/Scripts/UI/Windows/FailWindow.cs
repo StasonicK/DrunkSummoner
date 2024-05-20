@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace UI.Windows
 {
-    public class FailWindow : MonoBehaviour
+    public class FailWindow : BaseWindow
     {
         [SerializeField] private Button _backButton;
         [SerializeField] private Button _restartButton;
@@ -20,13 +20,13 @@ namespace UI.Windows
         {
             AudioManager.Instance.PlayAudio(AudioTrack.CloseWindowSoundFx);
             GameStateManager.Instance.ToInitialScreen();
-            gameObject.SetActive(false);
+            Hide();
         }
 
         private void OnRestartButtonClick()
         {
             GameStateManager.Instance.RestartGamePlay();
-            gameObject.SetActive(false);
+            Hide();
         }
     }
 }
