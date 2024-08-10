@@ -85,7 +85,7 @@ namespace Audio
         public void PlayCreatedObject()
         {
             if (_currentCreatedObjectAudioClip != null)
-                AudioInnerManager(_currentCreatedObjectAudioClip, _volume, AudioLayer.WordSound);
+                AudioInnerManager(_currentCreatedObjectAudioClip, _volume, AudioLayer.CreationSound);
         }
 
         public void PlayAudio(AudioTrack track)

@@ -419,16 +419,12 @@ MonoBehaviour:
     _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/LeftSideDirectionMovementWord.prefab
   - _gameObject: {fileID: 1190585624}
     _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/LeftSideRandomAngleDirectionMovementWord.prefab
-  - _gameObject: {fileID: 1190585623}
-    _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/LeftSideChangerDirectionMovementWord.prefab
   - _gameObject: {fileID: 1190585622}
     _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/RandomSideDirectionMovementWord.prefab
   - _gameObject: {fileID: 1190585621}
     _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/RightSideDirectionMovementWord.prefab
   - _gameObject: {fileID: 1190585620}
     _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/RightSideRandomAngleDirectionMovementWord.prefab
-  - _gameObject: {fileID: 1190585619}
-    _prefab: Assets/Resources/Prefabs/Words/AnyDirectionWordMovement/RightSideChangerDirectionMovementWord.prefab
   - _gameObject: {fileID: 1134868211}
     _prefab: Assets/Resources/Prefabs/SceneObjects/SM_Prop_Drink_02.fbx
   - _gameObject: {fileID: 780827776}
@@ -1248,12 +1244,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5467418199270842621}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1190585619 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9122300525926010761, guid: 3b9b8914da876b843955de56119cb659,
-    type: 3}
-  m_PrefabInstance: {fileID: 2123593556}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1190585620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6681729596299913752, guid: 3b9b8914da876b843955de56119cb659,
@@ -1269,12 +1259,6 @@ GameObject:
 --- !u!1 &1190585622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2262023903237388485, guid: 3b9b8914da876b843955de56119cb659,
-    type: 3}
-  m_PrefabInstance: {fileID: 2123593556}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1190585623 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4062503999236197238, guid: 3b9b8914da876b843955de56119cb659,
     type: 3}
   m_PrefabInstance: {fileID: 2123593556}
   m_PrefabAsset: {fileID: 0}
@@ -1488,7 +1472,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0d71238b38a4a38b35b955fbf5c019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentForPrefabs: {fileID: 0}
 --- !u!4 &1758911774
 Transform:
   m_ObjectHideFlags: 19
