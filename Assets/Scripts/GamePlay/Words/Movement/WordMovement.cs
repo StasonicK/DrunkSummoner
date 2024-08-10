@@ -4,7 +4,6 @@ namespace GamePlay.Words.Movement
 {
     public abstract class WordMovement : MonoBehaviour
     {
-        protected const int MIN_INCLUSIVE_VALUE = 0;
         protected const int MAX_EXCLUSIVE_VALUE = 2;
         protected const int POSITIVE_DIRECTION = 1;
         protected const int NEGATIVE_DIRECTION = -1;
@@ -14,38 +13,45 @@ namespace GamePlay.Words.Movement
         protected int _xDirection;
         protected int _yDirection;
         private bool _move;
-        // private Vector3 _initialPosition;
+        protected Vector3 MoveDirection;
 
-        private void Awake()
-        {
-            // _initialPosition = transform.position;
-            ChildAwake();
-        }
-
-        private void OnEnable()
-        {
-            // transform.position = _initialPosition;
-            _move = true;
-        }
-
-        private void OnDisable() =>
-            _move = false;
+        private void Awake() =>
+            AwakeChild();
 
         private void Update()
         {
             if (_move)
+            {
+                UpdateChild();
                 Move();
+            }
         }
 
-        protected virtual void ChildAwake()
+        protected virtual void AwakeChild()
         {
         }
 
-        protected static bool IsVertical(int isVertical) =>
-            isVertical != MIN_INCLUSIVE_VALUE;
+        protected virtual void UpdateChild()
+        {
+        }
 
-        protected static bool IsPositive(int isPositive) =>
-            isPositive != MIN_INCLUSIVE_VALUE;
+        public void SetMove()
+        {
+            gameObject.SetActive(true);
+            _move = true;
+        }
+
+        public void SetStop()
+        {
+            gameObject.SetActive(false);
+            _move = false;
+        }
+
+        protected bool IsVertical(int isVertical) =>
+            isVertical != Constants.ZERO_INIT;
+
+        protected bool IsPositive(int isPositive) =>
+            isPositive != Constants.ZERO_INIT;
 
         protected abstract void Move();
     }

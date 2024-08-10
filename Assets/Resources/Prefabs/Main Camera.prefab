@@ -46,7 +46,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -261,10 +261,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2929787843302826459}
     m_Modifications:
+    - target: {fileID: 173166836547957973, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: m_Name
+      value: RightSideChangerDirectionMovementWord
+      objectReference: {fileID: 0}
+    - target: {fileID: 174943330663134279, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1910101885458625251, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2452680730132250919, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2968159835405040327, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3757717123774695756, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: leftSideChangerDirectionMovement
+      value: 
+      objectReference: {fileID: 7385294424314268095}
+    - target: {fileID: 3757717123774695756, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: rightSideChangerDirectionMovement
+      value: 
+      objectReference: {fileID: 6183116875830542747}
+    - target: {fileID: 4197037060972142264, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4465368305387252611, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
         type: 3}
       propertyPath: _movementMultiplier
-      value: 0.25
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944728579845894186, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: m_Name
+      value: LeftSideChangerDirectionMovementWord
+      objectReference: {fileID: 0}
+    - target: {fileID: 5719282607680809972, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6077448440818543260, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
         type: 3}
@@ -326,6 +376,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7009902493370123956, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8012568249385574932, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+        type: 3}
+      propertyPath: _movementMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6, type: 3}
 --- !u!4 &2929787842756464703 stripped
@@ -334,3 +394,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 9007161515089623900}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6183116875830542747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2968159835405040327, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9007161515089623900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d1b43bb24b4b939e02cd9547b0e265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7385294424314268095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1910101885458625251, guid: 8b2a4bcc2930c7f4fa2b6011d5f1f7d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 9007161515089623900}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31002455d74949c496b84d72e43d18fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -27,8 +27,8 @@ namespace GamePlay.Words
                 _viewportPosition.y < _lowerEdge ||
                 _viewportPosition.y > _upperEdge)
             {
-                Debug.Log("MoveToOppositeScreenEdge");
-                Debug.Log($"transform.localPosition {transform.localPosition}");
+                // Debug.Log("MoveToOppositeScreenEdge");
+                // Debug.Log($"transform.localPosition {transform.localPosition}");
                 _newPosition = transform.localPosition;
                 // Debug.Log($"viewportPosition.x: {_viewportPosition.x}");
                 // Debug.Log($"viewportPosition.y: {_viewportPosition.y}");
@@ -51,7 +51,7 @@ namespace GamePlay.Words
                 }
 
                 transform.localPosition = _newPosition;
-                Debug.Log($"transform.localPosition {transform.localPosition}");
+                // Debug.Log($"transform.localPosition {transform.localPosition}");
             }
         }
     }

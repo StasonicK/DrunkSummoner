@@ -138,7 +138,7 @@ namespace Infrastructure
 
         public void ShowFailWindow()
         {
-            AudioManager.Instance.PlayAudio(AudioTrack.WinSoundFx);
+            AudioManager.Instance.PlayAudio(AudioTrack.FailSoundFx);
             _wordsHolder.HideAll();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();

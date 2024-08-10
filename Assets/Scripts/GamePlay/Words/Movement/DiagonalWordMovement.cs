@@ -6,19 +6,22 @@ namespace GamePlay.Words.Movement
     {
         [SerializeField] private float _movementMultiplier;
 
-        protected override void ChildAwake()
+        protected override void AwakeChild()
         {
-            _isVertical = Random.Range(MIN_INCLUSIVE_VALUE, MAX_EXCLUSIVE_VALUE);
-            _isPositive = Random.Range(MIN_INCLUSIVE_VALUE, MAX_EXCLUSIVE_VALUE);
+            _isVertical = Random.Range(Constants.ZERO_INIT, MAX_EXCLUSIVE_VALUE);
+            _isPositive = Random.Range(Constants.ZERO_INIT, MAX_EXCLUSIVE_VALUE);
 
             _xDirection = IsPositive(_isPositive) ? POSITIVE_DIRECTION : NEGATIVE_DIRECTION;
             _yDirection = IsPositive(_isPositive) ? POSITIVE_DIRECTION : NEGATIVE_DIRECTION;
+
+            MoveDirection = new Vector3(_xDirection, _yDirection, Constants.ZERO_INIT);
         }
 
         protected override void Move()
         {
-            transform.Translate(new Vector3(_xDirection * _movementMultiplier * Time.deltaTime,
-                _yDirection * _movementMultiplier * Time.deltaTime, MIN_INCLUSIVE_VALUE));
+            Debug.Log("DiagonalWordMovement");
+            Debug.Log($"MoveDirection.normalized {MoveDirection.normalized}");
+            transform.Translate(MoveDirection.normalized * _movementMultiplier * Time.deltaTime);
         }
     }
 }

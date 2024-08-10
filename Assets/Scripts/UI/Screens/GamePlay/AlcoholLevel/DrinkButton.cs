@@ -37,7 +37,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
 
             if (_button != null)
                 _button.onClick.AddListener(TryAddAlcoholLevel);
-            
+
             _drinkDelayPerSecond = _drinkDelayMilliseconds / MILLISECONDS_PER_SECOND;
             _fullDrinkDelayPerSecond = _fullDrinkDelayMilliseconds / MILLISECONDS_PER_SECOND;
         }

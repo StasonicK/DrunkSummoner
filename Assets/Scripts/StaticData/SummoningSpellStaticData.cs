@@ -8,7 +8,9 @@ namespace StaticData
     [CreateAssetMenu(fileName = "SummoningSpellStaticData", menuName = "StaticData/SummoningSpell")]
     public class SummoningSpellStaticData : ScriptableObject
     {
-        [FormerlySerializedAs("SummoningSpellId")] public SummonedObjectsId SummonedObjectsId;
+        [FormerlySerializedAs("SummoningSpellId")]
+        public SummonedObjectsId SummonedObjectsId;
+
         public WordMovement[] WordMovements;
         public int MoneyReward;
         public float FailThreshold;

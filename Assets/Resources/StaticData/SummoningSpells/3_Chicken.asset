@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd193f19b1a046f8b15f1786a9769b1d, type: 3}
   m_Name: 3_Chicken
   m_EditorClassIdentifier: 
-  SummoningSpellId: 1
+  SummonedObjectsId: 1
   WordMovements:
-  - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
-  - {fileID: 4164665400129123139, guid: 5c69b9e4e6093714fbee69051b32fce9, type: 3}
-  - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
+  - {fileID: -137958598269789537, guid: eabe7fb1af749ae4abd21672ec9f9a56, type: 3}
+  - {fileID: -6435204204395581637, guid: 60530a70533079845bf17df11b40278e, type: 3}
+  - {fileID: -8630922533669054667, guid: d734c4388f9fdec4f86553e507cd3cbd, type: 3}
   MoneyReward: 15
   FailThreshold: 0
   Signs:

@@ -8,7 +8,8 @@ namespace UI.Screens.Initial
 {
     public class PlaySpellButton : MonoBehaviour
     {
-        [FormerlySerializedAs("_summoningSpellId")] [SerializeField] private SummonedObjectsId _summonedObjectsId;
+        [FormerlySerializedAs("_summoningSpellId")] [SerializeField]
+        private SummonedObjectsId _summonedObjectsId;
 
         private Button _playButton;
 
