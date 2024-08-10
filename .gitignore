@@ -76,3 +76,8 @@ crashlytics-build.properties
 
 # MyAssets
 /[Aa]ssets/MyAssets/
+
+# Builds
+/BuildWindows/
+/BuildLinux/
+/BuildMac/
