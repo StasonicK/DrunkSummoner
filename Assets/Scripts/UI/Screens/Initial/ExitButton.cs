@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.Screens.Initial
@@ -12,12 +11,12 @@ namespace UI.Screens.Initial
         {
             _button = GetComponent<Button>();
             _button.onClick.AddListener(Exit);
+
+            if (Application.platform == RuntimePlatform.WebGLPlayer || Application.isEditor)
+                gameObject.SetActive(false);
         }
 
-        private void Exit()
-        {
-            if (!Application.isEditor)
-                Application.Quit();
-        }
+        private void Exit() =>
+            Application.Quit();
     }
 }

@@ -81,3 +81,5 @@ crashlytics-build.properties
 /BuildWindows/
 /BuildLinux/
 /BuildMac/
+/BuildWeb/
+/BuildAndroid/
