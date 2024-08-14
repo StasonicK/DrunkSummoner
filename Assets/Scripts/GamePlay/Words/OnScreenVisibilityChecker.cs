@@ -2,7 +2,7 @@
 
 namespace GamePlay.Words
 {
-    public class VisibilityChecker : MonoBehaviour
+    public class OnScreenVisibilityChecker : MonoBehaviour
     {
         [SerializeField] private float _lowerEdge = -0.1f;
         [SerializeField] private float _upperEdge = 1.1f;
