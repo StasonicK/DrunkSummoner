@@ -15,8 +15,15 @@ namespace GamePlay.Words.Movement
         private bool _move;
         protected Vector3 MoveDirection;
 
-        private void Awake() =>
+        public VisibilitySetter VisibilitySetter { get; private set; }
+
+        private void Awake()
+        {
+            VisibilitySetter = GetComponent<VisibilitySetter>();
+            VisibilitySetter.FadedOut += SetStop;
+            VisibilitySetter.FadedIn += SetMove;
             AwakeChild();
+        }
 
         private void Update()
         {
@@ -37,6 +44,7 @@ namespace GamePlay.Words.Movement
 
         public void SetMove()
         {
+            // _visibilitySetter.FadeIn();
             gameObject.SetActive(true);
             _move = true;
         }

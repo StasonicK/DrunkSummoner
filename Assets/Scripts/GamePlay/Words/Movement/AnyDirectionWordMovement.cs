@@ -31,9 +31,7 @@ namespace GamePlay.Words.Movement
 
         public void ChangeMoveDirection()
         {
-            Debug.Log($"oldDirection {MoveDirection}");
             _newDirection = _movementDirectionChanger.ChangeDirection(MoveDirection);
-            Debug.Log($"newDirection {_newDirection}");
             MoveDirection = new Vector3(_newDirection.x, _newDirection.y, Constants.ZERO_INIT);
         }
 
@@ -58,8 +56,6 @@ namespace GamePlay.Words.Movement
 
         protected override void Move()
         {
-            // Debug.Log("AnyDirectionWordMovement");
-            // Debug.Log($"MoveDirection.normalized {MoveDirection.normalized}");
             transform.Translate(MoveDirection.normalized * _movementMultiplier * Time.deltaTime);
         }
     }

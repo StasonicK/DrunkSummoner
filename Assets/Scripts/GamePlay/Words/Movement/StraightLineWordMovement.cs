@@ -20,11 +20,7 @@ namespace GamePlay.Words.Movement
             MoveDirection = new Vector3(_xDirection, _yDirection, Constants.ZERO_INIT);
         }
 
-        protected override void Move()
-        {
-            Debug.Log("StraightLineWordMovement");
-            Debug.Log($"MoveDirection.normalized {MoveDirection.normalized}");
+        protected override void Move() => 
             transform.Translate(MoveDirection.normalized * _movementMultiplier * Time.deltaTime);
-        }
     }
 }

@@ -7,10 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1329901842565584768, guid: 2831c25685cb49b42b8ef911fb36ac75,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4384358463327394858, guid: 2831c25685cb49b42b8ef911fb36ac75,
         type: 3}
       propertyPath: m_Name
-      value: DiagonalMoveWord
+      value: DiagonalMovementWord
+      objectReference: {fileID: 0}
+    - target: {fileID: 4384358463327394858, guid: 2831c25685cb49b42b8ef911fb36ac75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058911963077876827, guid: 2831c25685cb49b42b8ef911fb36ac75,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8806150682160965075, guid: 2831c25685cb49b42b8ef911fb36ac75,
         type: 3}
