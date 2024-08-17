@@ -8,7 +8,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
     {
         [SerializeField] [Range(0f, 1f)] private float _speedMultiplier;
 
-        private const float FAIL_THRESHOLD = 0f;
+        private const float FAIL_THRESHOLD = 0.0f;
 
         private static AlcoholLevel _instance;
 
@@ -39,11 +39,8 @@ namespace UI.Screens.GamePlay.AlcoholLevel
 
         public void Start()
         {
-            if (_startCoroutine != null)
-                StopCoroutine(_startCoroutine);
-
+            StartCoroutineUpdateTimeLimitBar();
             SetLevelsToMaxValue();
-            _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
         }
 
         private void SetLevelsToMaxValue()
@@ -66,11 +63,7 @@ namespace UI.Screens.GamePlay.AlcoholLevel
         public void Restart()
         {
             _currentLevel = _previousLevel;
-
-            if (_startCoroutine != null)
-                StopCoroutine(_startCoroutine);
-
-            _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
+            StartCoroutineUpdateTimeLimitBar();
         }
 
         public void TryAddAlcoholLevel(float value)
@@ -78,21 +71,48 @@ namespace UI.Screens.GamePlay.AlcoholLevel
             _result = _currentLevel + value;
 
             if (_result >= _maxLevel)
+            {
                 _currentLevel = _maxLevel;
+            }
             else
-                _currentLevel += value;
+            {
+                if (_currentLevel <= FAIL_THRESHOLD && _result > FAIL_THRESHOLD)
+                {
+                    _currentLevel = _result;
+                    StartCoroutineUpdateTimeLimitBar();
+                    GameStateManager.Instance.AlcoholLevelIncreased();
+                }
+                else
+                {
+                    _currentLevel = _result;
+                }
+            }
+        }
+
+        private void StartCoroutineUpdateTimeLimitBar()
+        {
+            if (_startCoroutine != null)
+                StopCoroutine(_startCoroutine);
+
+            _startCoroutine = StartCoroutine(CoroutineUpdateTimeLimitBar());
         }
 
         private IEnumerator CoroutineUpdateTimeLimitBar()
         {
             while (_currentLevel > FAIL_THRESHOLD)
             {
-                _currentLevel -= Time.deltaTime * _speedMultiplier;
+                _result = Time.deltaTime * _speedMultiplier;
+
+                if (_result > _currentLevel)
+                    _currentLevel = FAIL_THRESHOLD;
+                else
+                    _currentLevel -= _result;
+
                 UpdateTimeLimitBar();
                 yield return null;
             }
 
-            GameStateManager.Instance.ShowFailWindow();
+            GameStateManager.Instance.AlcoholLevelDroppedZero();
         }
 
         private void UpdateTimeLimitBar() =>

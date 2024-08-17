@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1329901842565584768, guid: 2831c25685cb49b42b8ef911fb36ac75,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3395271452968995943, guid: 2831c25685cb49b42b8ef911fb36ac75,
         type: 3}
       propertyPath: m_Pivot.x
@@ -117,6 +122,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: RandomSideDirectionMovementWord
       objectReference: {fileID: 0}
+    - target: {fileID: 7058911963077876827, guid: 2831c25685cb49b42b8ef911fb36ac75,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2831c25685cb49b42b8ef911fb36ac75, type: 3}
 --- !u!1 &2665493235627720536 stripped
@@ -139,9 +149,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementMultiplier: 0.5
   _singleDirectionTime: 2
-  _changeDirection: 0
-  _isFullRandom: 0
-  _isSideChanger: 1
-  _isLeft: 0
-  _isRandomAngle: 0
-  _isReflection: 0

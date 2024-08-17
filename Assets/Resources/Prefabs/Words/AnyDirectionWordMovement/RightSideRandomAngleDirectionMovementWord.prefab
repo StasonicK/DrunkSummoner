@@ -139,9 +139,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementMultiplier: 0.5
   _singleDirectionTime: 2
-  _changeDirection: 0
-  _isFullRandom: 0
-  _isSideChanger: 0
-  _isLeft: 0
-  _isRandomAngle: 1
-  _isReflection: 0

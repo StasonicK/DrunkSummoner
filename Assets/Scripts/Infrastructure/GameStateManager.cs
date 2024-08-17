@@ -114,7 +114,7 @@ namespace Infrastructure
         {
             AudioManager.Instance.PlayCreatedObject();
             AudioManager.Instance.PlayAudio(AudioTrack.WinSoundFx);
-            _wordsHolder.HideAll();
+            _wordsHolder.StopCurrentWord();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
             AlcoholLevel.Instance.SetPreviousLevel();
@@ -124,31 +124,43 @@ namespace Infrastructure
             Money.Instance.SetPreviousMoneyCount();
             Summoner.Instance.OffAll();
             Summoner.Instance.Summon(_summoningSpellStaticData.SummonedObjectsId);
-            // TODO show summoned item/creature
         }
 
         private void ShowNextWord()
         {
-            _wordsHolder.HideAll();
+            _wordsHolder.StopCurrentWord();
             AudioManager.Instance.SetWordAudioClip(_summoningSpellStaticData.AudioClips[_currentWordIndex]);
-            _wordsHolder.Show(_summoningSpellStaticData.WordMovements[_currentWordIndex],
+            _wordsHolder.SetCurrentWord(_summoningSpellStaticData.WordMovements[_currentWordIndex],
                 _summoningSpellStaticData.Signs[_currentWordIndex]);
+            _wordsHolder.SetFadingMoveCurrentWord();
             _currentWordIndex++;
         }
 
         public void ShowFailWindow()
         {
             AudioManager.Instance.PlayAudio(AudioTrack.FailSoundFx);
-            _wordsHolder.HideAll();
+            _wordsHolder.StopCurrentWord();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
             DrinkButton.Instance.Off();
             _failWindow.Show();
         }
 
+        public void AlcoholLevelDroppedZero()
+        {
+            AlcoholLevelDroppedZeroAnimator.Instance.StartRotation();
+            _wordsHolder.SetFadingStopCurrentWord();
+        }
+
+        public void AlcoholLevelIncreased()
+        {
+            AlcoholLevelDroppedZeroAnimator.Instance.StopRotation();
+            _wordsHolder.SetFadingMoveCurrentWord();
+        }
+
         private void ShowSuccessWindow()
         {
-            _wordsHolder.HideAll();
+            _wordsHolder.StopCurrentWord();
             Timer.Instance.Stop();
             AlcoholLevel.Instance.Stop();
             DrinkButton.Instance.Off();

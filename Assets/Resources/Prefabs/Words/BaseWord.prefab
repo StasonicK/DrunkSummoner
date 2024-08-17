@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 6709915625419779373}
   - component: {fileID: 1589460263646730105}
   - component: {fileID: 4181980629837680711}
+  - component: {fileID: 4646847029744582076}
   m_Layer: 20
   m_Name: BaseWord
   m_TagString: Untagged
@@ -210,6 +211,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d575b11410f492bbadf18ad2e27d0f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4646847029744582076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4384358463327394858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c0525f89f14985bf74932bf9c2a926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _backgroundSpriteRenderer: {fileID: 7058911963077876827}
+  _signSpriteRenderer: {fileID: 1329901842565584768}
+  _fadeDuration: 1
+  _disappearDuration: 1
 --- !u!1 &7400912099548474323
 GameObject:
   m_ObjectHideFlags: 0

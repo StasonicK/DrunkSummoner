@@ -75,13 +75,6 @@ namespace UI.Screens.GamePlay.AlcoholLevel
         {
             _drinkingProgress = true;
             _animator.Play(DRINKING_ANIMATION_STATE);
-
-            // while (_currentTime <= _drinkDelayPerSecond)
-            // {
-            //     _currentTime += Time.deltaTime;
-            //     yield return null;
-            // }
-
             AudioManager.Instance.PlayAudio(AudioTrack.DrinkBeerSoundFx);
             _alcoholLevel.TryAddAlcoholLevel(_addAlcoholLevelValue / DELIMETER_VALUE);
 
