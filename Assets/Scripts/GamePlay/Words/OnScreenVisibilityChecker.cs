@@ -31,18 +31,15 @@ namespace GamePlay.Words
                 _viewportPosition.y > _upperEdge)
             {
                 MoveToOppositeSide();
+                await UniTask.Yield(); // Ensure the position update is processed before the delay
                 await UniTask.Delay(AFTER_MOVE_TO_OPPOSITE_SCREEN_EDGE_DELAY);
-                // Debug.Log($"transform.localPosition {transform.localPosition}");
             }
         }
 
         private void MoveToOppositeSide()
         {
             Debug.Log("MoveToOppositeScreenEdge");
-            // Debug.Log($"transform.localPosition {transform.localPosition}");
             _newPosition = transform.localPosition;
-            // Debug.Log($"viewportPosition.x: {_viewportPosition.x}");
-            // Debug.Log($"viewportPosition.y: {_viewportPosition.y}");
 
             if ((_viewportPosition.x < 0 && _viewportPosition.y < 0) ||
                 (_viewportPosition.x > 1 && _viewportPosition.y < 0) ||
