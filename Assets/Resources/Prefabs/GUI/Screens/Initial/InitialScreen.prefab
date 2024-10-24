@@ -642,6 +642,7 @@ MonoBehaviour:
   _rowsCount: 5
   _verticalOffset: 20
   _horizontalOffset: 0
+  _horizontalPadding: 20
   _sameSidesSize: 0
   _singleColumn: 1
   _singleRow: 0

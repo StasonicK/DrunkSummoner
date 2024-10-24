@@ -11,6 +11,7 @@ namespace UI
         [SerializeField] private int _rowsCount = 5;
         [SerializeField] private float _verticalOffset;
         [SerializeField] private float _horizontalOffset;
+        [SerializeField] private float _horizontalPadding;
         [SerializeField] private bool _sameSidesSize;
         [SerializeField] private bool _singleColumn;
         [SerializeField] private bool _singleRow;
@@ -31,7 +32,7 @@ namespace UI
 
             if (singleColumn)
             {
-                horizontalCellSize = rectWidth;
+                horizontalCellSize = rectWidth - _horizontalPadding * 2;
                 verticalCellSize = rectHeight / rowsCount;
             }
             else if (singleRow)

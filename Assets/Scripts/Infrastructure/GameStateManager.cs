@@ -144,6 +144,7 @@ namespace Infrastructure
             AlcoholLevel.Instance.Stop();
             DrinkButton.Instance.Off();
             _failWindow.Show();
+            AlcoholLevelDroppedZeroAnimator.Instance.StopRotation();
         }
 
         public void AlcoholLevelDroppedZero()
@@ -165,6 +166,7 @@ namespace Infrastructure
             AlcoholLevel.Instance.Stop();
             DrinkButton.Instance.Off();
             _successWindow.Show();
+            AlcoholLevelDroppedZeroAnimator.Instance.StopRotation();
         }
     }
 }
