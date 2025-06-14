@@ -1694,7 +1694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4d22b7de22d4a5f90346099ec1a6ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedMultiplier: 0.05
+  _speedMultiplier: 0.1
 --- !u!114 &3166004001352158941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1770,8 +1770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 3015685033496420014}
   _alcoholLevel: {fileID: 6690275304820889099}
-  _addAlcoholLevelValue: 20
-  _addAlcoholLevelPrice: 2
+  _addAlcoholLevelValue: 50
+  _addAlcoholLevelPrice: 5
   _animator: {fileID: 0}
   _drinkDelayMilliseconds: 20
   _fullDrinkDelayMilliseconds: 40

@@ -21,18 +21,19 @@ namespace GamePlay.Words.Movement
         {
             if (_currentTime >= _singleDirectionTime)
             {
-                _currentTime = Constants.ZERO_INIT;
+                _currentTime = Constants.ZERO_INT;
                 ChangeMoveDirection();
+
                 return;
             }
 
             _currentTime += Time.deltaTime;
         }
 
-        public void ChangeMoveDirection()
+        public override void ChangeMoveDirection()
         {
             _newDirection = _movementDirectionChanger.ChangeDirection(MoveDirection);
-            MoveDirection = new Vector3(_newDirection.x, _newDirection.y, Constants.ZERO_INIT);
+            MoveDirection = new Vector3(_newDirection.x, _newDirection.y, Constants.ZERO_INT);
         }
 
         protected override void AwakeChild()
@@ -40,16 +41,16 @@ namespace GamePlay.Words.Movement
             Initialize();
             _movementDirectionChanger =
                 new MovementDirectionChanger(IsFullRandom, IsSideChanger, IsRandomAngle, IsLeft);
-            _currentTime = Constants.ZERO_INIT;
+            _currentTime = Constants.ZERO_INT;
 
-            _xDirection = IsPositive(Random.Range(Constants.ZERO_INIT, MAX_EXCLUSIVE_VALUE))
+            _xDirection = IsPositive(Random.Range(Constants.ZERO_INT, MAX_EXCLUSIVE_VALUE))
                 ? POSITIVE_DIRECTION
                 : NEGATIVE_DIRECTION;
-            _yDirection = IsPositive(Random.Range(Constants.ZERO_INIT, MAX_EXCLUSIVE_VALUE))
+            _yDirection = IsPositive(Random.Range(Constants.ZERO_INT, MAX_EXCLUSIVE_VALUE))
                 ? POSITIVE_DIRECTION
                 : NEGATIVE_DIRECTION;
 
-            MoveDirection = new Vector3(_xDirection, _yDirection, Constants.ZERO_INIT);
+            MoveDirection = new Vector3(_xDirection, _yDirection, Constants.ZERO_INT);
         }
 
         protected abstract void Initialize();

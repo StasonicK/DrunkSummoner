@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: Summoner
+  m_EditorClassIdentifier: 
+  mSourceClip: {fileID: 8300000, guid: 52bd2c63df6dc354b8a5e447e7d06952, type: 3}
+  mAudioFilePath: 
+  mSampleRate: 44100
+  mIgnoreLatencyOffset: 0
+  mTempoSections:
+  - sectionName: Silence
+    startSample: 0
+    samplesPerBeat: 22050
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  - sectionName: SongMainBit1
+    startSample: 193267
+    samplesPerBeat: 96218.18181818182
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  - sectionName: SongMainBit2
+    startSample: 229001
+    samplesPerBeat: 96218.18181818182
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  mTracks:
+  - {fileID: 11400000, guid: bda5afa8eac54394f95a621383e0d631, type: 2}
+  - {fileID: 11400000, guid: 51bf4900950683f4086c2896e5b2c0ba, type: 2}

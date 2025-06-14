@@ -31,6 +31,8 @@ namespace Infrastructure
         private SummoningSpellStaticData _summoningSpellStaticData;
         private int _currentWordIndex;
 
+        public bool IsCommonMode { private set; get; } = true;
+
         private void Awake()
         {
             DontDestroyOnLoad(this);
@@ -168,5 +170,11 @@ namespace Infrastructure
             _successWindow.Show();
             AlcoholLevelDroppedZeroAnimator.Instance.StopRotation();
         }
+
+        public void SetCommonMode() =>
+            IsCommonMode = true;
+
+        public void SetRhythmMode() =>
+            IsCommonMode = false;
     }
 }

@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 1589460263646730105}
   - component: {fileID: 4181980629837680711}
   - component: {fileID: 4646847029744582076}
+  - component: {fileID: 8123837133364401031}
   m_Layer: 20
   m_Name: BaseWord
   m_TagString: Untagged
@@ -171,8 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75493eb80f7f4584928faddc9b3e3ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _lowerEdge: -0.05
-  _upperEdge: 1.05
+  _startDisappearEdge: -0.15
+  _endDisappearEdge: 1.15
+  _disappearToAppearDifferance: 0.05
 --- !u!114 &6709915625419779373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,8 +227,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _backgroundSpriteRenderer: {fileID: 7058911963077876827}
   _signSpriteRenderer: {fileID: 1329901842565584768}
-  _fadeDuration: 1
-  _disappearDuration: 1
+  _fadeOutDuration: 1
+  _fadeInDuration: 1
+--- !u!114 &8123837133364401031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4384358463327394858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c399a878e0d2423781b8dd9dee0357be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bit1: MainBit1
+  _bit2: MainBit2
 --- !u!1 &7400912099548474323
 GameObject:
   m_ObjectHideFlags: 0
