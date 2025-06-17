@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd193f19b1a046f8b15f1786a9769b1d, type: 3}
+  m_Name: 6_Diamond
+  m_EditorClassIdentifier: 
+  SummonedObjectsId: 3
+  WordMovements:
+  - {fileID: -6466043593551025746, guid: 2128347dc593afc40ba0a39507673d80, type: 3}
+  - {fileID: -6466043593551025746, guid: 2128347dc593afc40ba0a39507673d80, type: 3}
+  - {fileID: -6466043593551025746, guid: 2128347dc593afc40ba0a39507673d80, type: 3}
+  - {fileID: -6466043593551025746, guid: 2128347dc593afc40ba0a39507673d80, type: 3}
+  - {fileID: -6466043593551025746, guid: 2128347dc593afc40ba0a39507673d80, type: 3}
+  - {fileID: -6466043593551025746, guid: 2128347dc593afc40ba0a39507673d80, type: 3}
+  MoneyReward: 30
+  FailThreshold: 0
+  Signs:
+  - {fileID: -1574835875, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: 1129195471, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: 1332069658, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: 737203157, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: -1703192487, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: -1067005535, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  AudioClips:
+  - {fileID: 8300000, guid: 82a06bf8b0703ca4785084f089497eea, type: 3}
+  - {fileID: 8300000, guid: 238e8b3ccc9795048b5df59235a54735, type: 3}
+  - {fileID: 8300000, guid: 4d4621d8d8e79274e9fd8b347fc8cced, type: 3}
+  - {fileID: 8300000, guid: 3bcc81302f83e0849ab2320056b050db, type: 3}
+  - {fileID: 8300000, guid: d5e44ff3b374d154e90624fb37c3bf81, type: 3}
+  - {fileID: 8300000, guid: e5c17d195e26bc544832e12c9d6a7eda, type: 3}

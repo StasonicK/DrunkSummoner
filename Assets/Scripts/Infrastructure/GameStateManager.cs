@@ -32,6 +32,7 @@ namespace Infrastructure
         private int _currentWordIndex;
 
         public bool IsCommonMode { private set; get; } = true;
+        public bool IsNormalDifficulty { private set; get; } = true;
 
         private void Awake()
         {
@@ -80,6 +81,7 @@ namespace Infrastructure
             Money.Instance.Start();
             DrinkButton.Instance.On();
             AudioManager.Instance.SetCreatedObjectAudioClip(_summoningSpellStaticData.SummonedObjectsId);
+            AlcoholLevelDroppedZeroAnimator.Instance.StopRotation();
         }
 
         public void RestartGamePlay()
@@ -176,5 +178,11 @@ namespace Infrastructure
 
         public void SetRhythmMode() =>
             IsCommonMode = false;
+
+        public void SetNormalDifficulty() =>
+            IsNormalDifficulty = true;
+
+        public void SetAsianDifficulty() =>
+            IsNormalDifficulty = false;
     }
 }

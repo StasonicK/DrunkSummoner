@@ -5,5 +5,6 @@
         PotatoBag = 0,
         Chicken = 1,
         Shovel = 2,
+        Diamond = 3,
     }
 }

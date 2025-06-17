@@ -1949,8 +1949,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dustVfx: {fileID: 5262946519086732199}
   _fireworkVfx: {fileID: 1736794438477758480}
-  _dustVfxParticleSystem: {fileID: 0}
-  _fireworkVfxParticleSystem: {fileID: 0}
+  _dustVfxParticleSystem: {fileID: 5262946519105358433}
+  _fireworkVfxParticleSystem: {fileID: 1935871437698164400}
 --- !u!1 &9213206596849299574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,6 +2530,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1737492006591004626}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &1935871437698164400 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198535614377564514, guid: e403bb3bf04e11b4e87aba0932fb7013,
+    type: 3}
+  m_PrefabInstance: {fileID: 1737492006591004626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5262946519086648727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2628,6 +2634,12 @@ MonoBehaviour:
 --- !u!4 &5262946519087034767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 424984, guid: 33d3f43f5c3accb4fa26f3d2917974c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5262946519086648727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5262946519105358433 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19826678, guid: 33d3f43f5c3accb4fa26f3d2917974c1,
     type: 3}
   m_PrefabInstance: {fileID: 5262946519086648727}
   m_PrefabAsset: {fileID: 0}

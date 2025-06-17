@@ -42,6 +42,9 @@ namespace UI.Screens.GamePlay.Timer
 
         public void Start()
         {
+            if (GameStateManager.Instance.IsNormalDifficulty)
+                return;
+
             if (_startCoroutine != null)
                 StopCoroutine(_startCoroutine);
 

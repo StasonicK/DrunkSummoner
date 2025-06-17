@@ -124,7 +124,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7377009154791642793}
-  - component: {fileID: 3072152989395347518}
   m_Layer: 5
   m_Name: AlcoholDropedZeroDrink
   m_TagString: Untagged
@@ -153,21 +152,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3072152989395347518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210226494073711893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5428b507bc2c4d829b0516b333338da7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _targetTransform: {fileID: 136172032776148341}
-  _rotateAngle: 30
-  _duration: 1
 --- !u!1 &861155981604057067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,8 +1117,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1951598369458903965}
   - component: {fileID: 4552556698979096690}
-  - component: {fileID: 3606536896801186540}
-  - component: {fileID: 2980523376552086564}
   m_Layer: 5
   m_Name: TimeBar
   m_TagString: Untagged
@@ -1215,32 +1197,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3606536896801186540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4215589932215942289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734a07f38bef4ca28b74642ce9de6749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedMultiplier: 0.5
---- !u!114 &2980523376552086564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4215589932215942289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4ad63a606ec4af5b90b5fe7a90955d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _slider: {fileID: 4552556698979096690}
 --- !u!1 &5092360316254097074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,8 +1556,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2472855918235085248}
   - component: {fileID: 7175771357961472920}
-  - component: {fileID: 6690275304820889099}
-  - component: {fileID: 3166004001352158941}
   m_Layer: 5
   m_Name: AlcoholLevelBar
   m_TagString: Untagged
@@ -1682,32 +1636,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6690275304820889099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414320808392295521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4d22b7de22d4a5f90346099ec1a6ab4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speedMultiplier: 0.1
---- !u!114 &3166004001352158941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6414320808392295521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e40056e64874e64ba10b1736116a768, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _slider: {fileID: 7175771357961472920}
 --- !u!1 &6534031963368600825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1718,7 +1646,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4748147145456354918}
   - component: {fileID: 4356918454080310475}
-  - component: {fileID: 7764626064365332409}
   m_Layer: 5
   m_Name: DrinkButton
   m_TagString: Untagged
@@ -1756,25 +1683,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6534031963368600825}
   m_CullTransparentMesh: 1
---- !u!114 &7764626064365332409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6534031963368600825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dca90462180e48879335498c79703191, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 3015685033496420014}
-  _alcoholLevel: {fileID: 6690275304820889099}
-  _addAlcoholLevelValue: 50
-  _addAlcoholLevelPrice: 5
-  _animator: {fileID: 0}
-  _drinkDelayMilliseconds: 20
-  _fullDrinkDelayMilliseconds: 40
 --- !u!1 &6843118666522095476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1731,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7343144645620493338}
+  - component: {fileID: 3191613964915086889}
+  - component: {fileID: 14773841030125483}
+  - component: {fileID: 1242945183793039839}
+  - component: {fileID: 591714972606448579}
+  - component: {fileID: 75696629768738528}
+  - component: {fileID: 3570744796213897808}
+  - component: {fileID: 6908690423790337052}
+  - component: {fileID: 8238001662239970093}
+  - component: {fileID: 4931173653808037851}
   m_Layer: 5
   m_Name: GamePlayScreen
   m_TagString: Untagged
@@ -1857,6 +1774,132 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3191613964915086889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734a07f38bef4ca28b74642ce9de6749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedMultiplier: 0.5
+--- !u!114 &14773841030125483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ad63a606ec4af5b90b5fe7a90955d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 4552556698979096690}
+--- !u!114 &1242945183793039839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4d22b7de22d4a5f90346099ec1a6ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speedMultiplier: 0.1
+--- !u!114 &591714972606448579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e40056e64874e64ba10b1736116a768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slider: {fileID: 7175771357961472920}
+--- !u!114 &75696629768738528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5428b507bc2c4d829b0516b333338da7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetTransform: {fileID: 136172032776148341}
+  _rotateAngle: 30
+  _duration: 1
+--- !u!114 &3570744796213897808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f073f98e48a941e9a69f3ecdf4896d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _initialMoneyCount: 10
+  _moneyCounter: {fileID: 6908690423790337052}
+--- !u!114 &6908690423790337052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875398dcaed24ea3a1f490c52bb99ab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moneyText: {fileID: 8012343951342428323}
+--- !u!114 &8238001662239970093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dca90462180e48879335498c79703191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 3015685033496420014}
+  _alcoholLevel: {fileID: 1242945183793039839}
+  _addAlcoholLevelValue: 50
+  _addAlcoholLevelPrice: 5
+  _animator: {fileID: 0}
+  _drinkDelayMilliseconds: 20
+  _fullDrinkDelayMilliseconds: 40
+--- !u!114 &4931173653808037851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7343144645620493339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a9822b81f6462caa12be8524bab5dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timerGameObject: {fileID: 6843118666522095476}
 --- !u!1 &7343144646085444064
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,8 +2369,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7196015841385576754}
-  - component: {fileID: 2132662396658421063}
-  - component: {fileID: 4577431925443006180}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -2357,33 +2398,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2132662396658421063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8092724735951591506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f073f98e48a941e9a69f3ecdf4896d71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialMoneyCount: 10
-  _moneyCounter: {fileID: 4577431925443006180}
---- !u!114 &4577431925443006180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8092724735951591506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 875398dcaed24ea3a1f490c52bb99ab4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _moneyText: {fileID: 8012343951342428323}
 --- !u!1 &8222001943829500471
 GameObject:
   m_ObjectHideFlags: 0

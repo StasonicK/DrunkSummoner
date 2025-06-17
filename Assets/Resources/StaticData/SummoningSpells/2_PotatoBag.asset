@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd193f19b1a046f8b15f1786a9769b1d, type: 3}
   m_Name: 2_PotatoBag
   m_EditorClassIdentifier: 
-  SummoningSpellId: 0
+  SummonedObjectsId: 0
   WordMovements:
   - {fileID: 4164665400129123139, guid: 5c69b9e4e6093714fbee69051b32fce9, type: 3}
   - {fileID: 7183469444901768546, guid: 066b5c32d4eea014eb991dd0a6c3eea4, type: 3}
@@ -20,7 +20,7 @@ MonoBehaviour:
   FailThreshold: 0
   Signs:
   - {fileID: 1129195471, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
-  - {fileID: -1703192487, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
+  - {fileID: 1332069658, guid: e519de9c421df914d9b623b5bea2bc0a, type: 3}
   AudioClips:
   - {fileID: 8300000, guid: 310fa45cf3a260140b8783c113061e7b, type: 3}
-  - {fileID: 8300000, guid: 238e8b3ccc9795048b5df59235a54735, type: 3}
+  - {fileID: 8300000, guid: 67b359324479fdb4c8001c212cdc81b8, type: 3}
