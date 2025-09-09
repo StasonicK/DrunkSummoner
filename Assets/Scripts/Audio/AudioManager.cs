@@ -9,9 +9,12 @@ namespace Audio
         [SerializeField] private AudioClip _winSoundFx;
         [SerializeField] private AudioClip _failSoundFx;
         [SerializeField] private AudioClip _drinkBeerSoundFx;
+
         [SerializeField] private AudioClip _potatoBagCreatedSoundFx;
         [SerializeField] private AudioClip _chickenCreatedFx;
         [SerializeField] private AudioClip _shovelCreatedSoundFx;
+        [SerializeField] private AudioClip _diamondCreatedSoundFx;
+
         [SerializeField] private AudioClip _closeWindowSoundFx;
         [SerializeField] private AudioClip _openWindowSoundFx;
 
@@ -73,6 +76,9 @@ namespace Audio
                 case SummonedObjectsId.Shovel:
                     _currentCreatedObjectAudioClip = _shovelCreatedSoundFx;
                     break;
+                case SummonedObjectsId.Diamond:
+                    _currentCreatedObjectAudioClip = _diamondCreatedSoundFx;
+                    break;
             }
         }
 
@@ -112,6 +118,9 @@ namespace Audio
                     break;
                 case AudioTrack.ShovelCreatedSoundFx:
                     AudioInnerManager(_shovelCreatedSoundFx, _volume, AudioLayer.CreationSound);
+                    break;
+                case AudioTrack.DiamondCreatedSoundFx:
+                    AudioInnerManager(_diamondCreatedSoundFx, _volume, AudioLayer.CreationSound);
                     break;
                 case AudioTrack.CloseWindowSoundFx:
                     AudioInnerManager(_closeWindowSoundFx, _volume, AudioLayer.UISound);

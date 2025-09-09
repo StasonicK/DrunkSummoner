@@ -43,6 +43,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -171,6 +172,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -299,6 +301,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -427,6 +430,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -555,6 +559,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -683,6 +688,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -826,6 +832,8 @@ MonoBehaviour:
     type: 3}
   _chickenCreatedFx: {fileID: 8300000, guid: 646696b0eebb22246bf0f31e7ef766fd, type: 3}
   _shovelCreatedSoundFx: {fileID: 8300000, guid: efe48e0a70ab9d24b9f4fa7bfa4bab18,
+    type: 3}
+  _diamondCreatedSoundFx: {fileID: 8300000, guid: 4dc2d890b9e38f344a1285978b685104,
     type: 3}
   _closeWindowSoundFx: {fileID: 8300000, guid: 9633fe6b24d3f59469f0469caa7c85f4, type: 3}
   _openWindowSoundFx: {fileID: 8300000, guid: 7ea8a459934d5e94a85750cc5b16d7bd, type: 3}
