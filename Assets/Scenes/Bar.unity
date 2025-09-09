@@ -125,6 +125,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7110570586843338017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &63666334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1905141119828111080, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 780827766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &97249440
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,6 +288,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2130902355930207518, guid: 4b3cacd2e22710f498fd7b167df3a306,
     type: 3}
   m_PrefabInstance: {fileID: 5467418199270842621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &496635676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5803183201784592700, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 780827766}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &503507273
 GameObject:
@@ -513,12 +525,6 @@ MonoBehaviour:
     _prefab: Assets/Resources/Prefabs/GUI/UI.prefab
   - _gameObject: {fileID: 780827775}
     _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/InitialScreen.prefab
-  - _gameObject: {fileID: 780827770}
-    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayPotatoBagSpellButton.prefab
-  - _gameObject: {fileID: 780827769}
-    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayChickenSpellButton.prefab
-  - _gameObject: {fileID: 780827768}
-    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayShovelSpellButton.prefab
   - _gameObject: {fileID: 207291601}
     _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayPotatoBagSpellButton.prefab
   - _gameObject: {fileID: 509042664}
@@ -526,6 +532,14 @@ MonoBehaviour:
   - _gameObject: {fileID: 847031384}
     _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayShovelSpellButton.prefab
   - _gameObject: {fileID: 676312955}
+    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayDiamondSpellButton.prefab
+  - _gameObject: {fileID: 719787247}
+    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayPotatoBagSpellButton.prefab
+  - _gameObject: {fileID: 496635676}
+    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayChickenSpellButton.prefab
+  - _gameObject: {fileID: 1658761424}
+    _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayShovelSpellButton.prefab
+  - _gameObject: {fileID: 63666334}
     _prefab: Assets/Resources/Prefabs/GUI/Screens/Initial/PlayDiamondSpellButton.prefab
   - _gameObject: {fileID: 780827774}
     _prefab: Assets/Resources/Prefabs/GUI/Screens/GamePlayScreen.prefab
@@ -571,6 +585,12 @@ GameObject:
 --- !u!1 &676312955 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8142726297801357233, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 780827766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &719787247 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4465207155041863770, guid: b0c444e45ce42c74693ee76a0838769f,
     type: 3}
   m_PrefabInstance: {fileID: 780827766}
   m_PrefabAsset: {fileID: 0}
@@ -861,24 +881,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8554b2d86363443789925befd02836fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &780827768 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5541967061124091421, guid: b0c444e45ce42c74693ee76a0838769f,
-    type: 3}
-  m_PrefabInstance: {fileID: 780827766}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &780827769 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4558468678964133086, guid: b0c444e45ce42c74693ee76a0838769f,
-    type: 3}
-  m_PrefabInstance: {fileID: 780827766}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &780827770 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 830923712676092933, guid: b0c444e45ce42c74693ee76a0838769f,
-    type: 3}
-  m_PrefabInstance: {fileID: 780827766}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &780827771 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1317345824437803068, guid: b0c444e45ce42c74693ee76a0838769f,
@@ -1303,6 +1305,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1717614832421565219, guid: 4b3cacd2e22710f498fd7b167df3a306,
     type: 3}
   m_PrefabInstance: {fileID: 5467418199270842621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1658761424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2206465995844871352, guid: b0c444e45ce42c74693ee76a0838769f,
+    type: 3}
+  m_PrefabInstance: {fileID: 780827766}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723345814 stripped
 GameObject:
