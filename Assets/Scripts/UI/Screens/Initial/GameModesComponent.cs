@@ -1,6 +1,4 @@
-﻿// Assets/Scripts/UI/Screens/Initial/GameModesComponent.cs
-
-using Infrastructure;
+﻿using Infrastructure;
 using UnityEngine;
 using UnityEngine.UI;
 

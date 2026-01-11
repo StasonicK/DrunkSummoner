@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.agava.webutility": "https://github.com/forcepusher/com.agava.webutility.git#3.1.0",
+    "com.bananaparty.webutility": "https://github.com/forcepusher/com.bananaparty.webutility.git#4.0.0",
     "com.coffee.softmask-for-ugui": "https://github.com/mob-sakai/SoftMaskForUGUI.git",
     "com.unity.2d.animation": "11.0.0",
     "com.unity.2d.sprite": "1.0.0",
