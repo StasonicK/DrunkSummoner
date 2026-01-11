@@ -17,6 +17,23 @@ namespace GamePlay.Words.Movement
         private float _currentTime;
         private Vector3 _newDirection;
 
+        protected override void AwakeChild()
+        {
+            Initialize();
+            _movementDirectionChanger =
+                new MovementDirectionChanger(IsFullRandom, IsSideChanger, IsRandomAngle, IsLeft);
+            _currentTime = Constants.ZERO_INT;
+
+            _xDirection = IsPositive(Random.Range(Constants.ZERO_INT, MAX_EXCLUSIVE_VALUE))
+                ? POSITIVE_DIRECTION
+                : NEGATIVE_DIRECTION;
+            _yDirection = IsPositive(Random.Range(Constants.ZERO_INT, MAX_EXCLUSIVE_VALUE))
+                ? POSITIVE_DIRECTION
+                : NEGATIVE_DIRECTION;
+
+            MoveDirection = new Vector3(_xDirection, _yDirection, Constants.ZERO_INT);
+        }
+
         protected override void UpdateChild()
         {
             if (_currentTime >= _singleDirectionTime)
@@ -36,28 +53,9 @@ namespace GamePlay.Words.Movement
             MoveDirection = new Vector3(_newDirection.x, _newDirection.y, Constants.ZERO_INT);
         }
 
-        protected override void AwakeChild()
-        {
-            Initialize();
-            _movementDirectionChanger =
-                new MovementDirectionChanger(IsFullRandom, IsSideChanger, IsRandomAngle, IsLeft);
-            _currentTime = Constants.ZERO_INT;
-
-            _xDirection = IsPositive(Random.Range(Constants.ZERO_INT, MAX_EXCLUSIVE_VALUE))
-                ? POSITIVE_DIRECTION
-                : NEGATIVE_DIRECTION;
-            _yDirection = IsPositive(Random.Range(Constants.ZERO_INT, MAX_EXCLUSIVE_VALUE))
-                ? POSITIVE_DIRECTION
-                : NEGATIVE_DIRECTION;
-
-            MoveDirection = new Vector3(_xDirection, _yDirection, Constants.ZERO_INT);
-        }
-
         protected abstract void Initialize();
 
-        protected override void Move()
-        {
+        protected override void Move() => 
             transform.Translate(MoveDirection.normalized * _movementMultiplier * Time.deltaTime);
-        }
     }
 }
